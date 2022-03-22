@@ -1,9 +1,8 @@
-import React from 'react'
-import './footer.css'
-const services = () => {
+import './services.css'
+const Services = () => {
   return (
     <div>services</div>
   )
 }
 
-export default services
+export default Services
