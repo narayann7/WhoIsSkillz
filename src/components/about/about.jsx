@@ -2,7 +2,13 @@
 import './about.css'
 const About = () => {
   return (
-    <div>about</div>
+    <section class="about_section">
+     <div class="blur_bg">
+        <div class="blur2"></div>
+      </div>
+
+
+    </section>
   )
 }
 

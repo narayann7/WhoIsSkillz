@@ -1,3 +1,34 @@
-header{
-    height: 100px;
+/* header{
+    height: 80vh;
+    background-color: aquamarine;
+    width: 50vw;
+} */
+/* 
+body{
+    background-color: #f5f5f5;
+} */
+
+.HeaderMainDiv{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.blur1{
+   
+    position:relative;
+    top: -20vh;
+
+}
+
+.blur_bg{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content
+{
+position: relative;
+top: -100vh;
+
 }

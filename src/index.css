@@ -12,6 +12,7 @@
 }
 
 :root{
+    --color-primary-background: #0D0F1F;
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
@@ -28,10 +29,10 @@
 
 --transition : all 400ms ease;
 }
-
+/* 
 html{
     scroll-behavior: smooth;
-}
+} */
 
 ::-webkit-scrollbar{
     display: none;
@@ -39,12 +40,13 @@ html{
 
 body{
 font-family: "Poppins", sans-serif;
-    background: var(--color-bg);
+
+    background: var(--color-primary-background);
     color: var(--color-white);
     line-height: 1.7;
 
 }
-
+/* 
 
 .container{
     max-width: var(--container-width-lg);
@@ -115,4 +117,6 @@ img{
     display: block;
     object-fit: cover;
     width: 100%;
-}
+} 
+
+*/
