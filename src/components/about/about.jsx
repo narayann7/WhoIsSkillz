@@ -1,15 +1,6 @@
-
-import './about.css'
+import "./about.css";
 const About = () => {
-  return (
-    <section class="about_section">
-     <div class="blur_bg">
-        <div class="blur2"></div>
-      </div>
+  return <section class="about_section"></section>;
+};
 
-
-    </section>
-  )
-}
-
-export default About
+export default About;
