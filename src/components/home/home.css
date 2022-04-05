@@ -9,25 +9,69 @@
   justify-content: center;
 }
 
-/* .main_section {
+/* hello iam */
+.center_container h4 {
+  color: var(--color-primary-text2);
+  font-size: 2rem;
+}
+
+/* name */
+.center_container h1 {
+  font-size: 3rem;
+}
+
+.imWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-}
- */
-.center_container h4 {
-  color: var(--color-primary-text2);
-  font-size: 25px;
-}
-.center_container h3 {
-  color: var(--color-primary-text3);
-  font-size: 30px;
-}
-.center_container h1 {
-  font-size: 39px;
+  flex-direction: column;
 }
 
-.test {
+.imWrapper .words span {
+  font-size: 2.7rem;
+  display: block;
+  /* height: 100%; */
+  font-family: var(--font-sen);
+  animation: spin_words 6s infinite;
+}
+.imWrapper .words span h3 {
+
+  font-size: 2.5rem;
+  font-family: var(--font-sen);
+  color: var(--color-primary-text2);
+}
+
+.imWrapper .words {
+  height: 2.8rem;
+/* background-color: beige; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+/* @keyframes spin_words {
+
+
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+
+} */
+
+/* floating */
+
+/* .test {
     width: 70px;
     height: 70px;
     background-color: red;
@@ -48,4 +92,4 @@
  .test:hover {
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
- }
+ } */
