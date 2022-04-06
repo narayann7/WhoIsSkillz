@@ -3,6 +3,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  /* background-color: antiquewhite; */
   background-color: var(--color-primary-background);
   display: flex;
   align-items: center;
@@ -25,71 +26,146 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-sizing: content-box;
 }
 
-.imWrapper .words span {
-  font-size: 2.7rem;
-  display: block;
-  /* height: 100%; */
-  font-family: var(--font-sen);
-  animation: spin_words 6s infinite;
-}
 .imWrapper .words span h3 {
-
-  font-size: 2.5rem;
+  padding: 0px;
+  line-height: 3.5rem;
+  font-size: 2.8rem;
   font-family: var(--font-sen);
   color: var(--color-primary-text2);
 }
 
 .imWrapper .words {
-  height: 2.8rem;
-/* background-color: beige; */
-
+  height: 3.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* overflow: hidden; */
+  justify-content: flex-start;
+  overflow: hidden;
 }
-
-/* @keyframes spin_words {
-
-
+.imWrapper .words span {
+  font-size: 2.7rem;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: var(--font-sen);
+  animation: spin_words 7s infinite;
+}
+@keyframes spin_words {
   10% {
     transform: translateY(-112%);
   }
   25% {
     transform: translateY(-100%);
   }
+
   35% {
     transform: translateY(-212%);
   }
   50% {
     transform: translateY(-200%);
   }
-
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  80% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+/* 
+.socials{
+  height: 100px;
+  width: 100px;
+background-color:#ffffff;
+right: 13vw;
+bottom: 5vh;
 } */
 
-/* floating */
+.socials {
+  bottom: 10vh;
+  right: 3vw;
+  align-self: flex-end;
+  position: relative;
+}
 
-/* .test {
-    width: 70px;
-    height: 70px;
-    background-color: red;
-    border-radius: 50%;
-    box-shadow: 0 6px 10px 0 #666;
-    transition: all 0.1s ease-in-out;
-  
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    line-height: 70px;
-  
-    position: fixed;
-    right: 13vw;
-    bottom: 5vh;
- }
-  
- .test:hover {
+.socials div {
+  margin-top: 5px;
+}
+.socials .linkedin {
+  height: 40px;
+  width: 40px;
+  background-color: aquamarine;
+}
+
+.socials .github {
+  height: 40px;
+  width: 40px;
+  background-color: aquamarine;
+}
+
+.socials .gmail {
+  height: 40px;
+  width: 40px;
+  background-color: aquamarine;
+}
+/*   
+ .socials:hover {
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
- } */
+ }  */
+
+/* transition: all 0.1s ease-in-out; */
+
+.socials .gmail:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/Google.png") no-repeat;
+}
+
+.socials .gmail {
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/icons/Google_bw.png") no-repeat;
+  display: inline-block;
+}
+
+.socials .github:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/GitHub.png") no-repeat;
+}
+
+.socials .github {
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/icons/GitHub_bw.png") no-repeat;
+  display: inline-block;
+}
+
+
+
+
+
+.socials .linkedin:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/linkedin.png") no-repeat;
+}
+
+.socials .linkedin {
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/icons/linkedin_bg.png") no-repeat;
+  display: inline-block;
+}
