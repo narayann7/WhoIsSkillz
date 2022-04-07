@@ -4,14 +4,19 @@ import About from "./components/about/about.jsx";
 import Experience from "./components/experience/experience.jsx";
 import Footer from "./components/footer/footer.jsx";
 import Projects from "./components/projects/projects.jsx";
-import Nav from "./components/nav/nav.jsx";
 import Contact from "./components/contact/contact.jsx";
+import Header from "./components/header/header.jsx";
 function App() {
   return (
     <div class="main_div">
+      <Header  />
       <Home  />
-      <Nav />
+  
       <About />
+      <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
       <Experience />
       <Projects />
       <Contact />

@@ -1,6 +1,6 @@
 import "./about.css";
 const About = () => {
-  return <section class="about_section"></section>;
+  return <section id="about" class="main_about_section"></section>;
 };
 
 export default About;

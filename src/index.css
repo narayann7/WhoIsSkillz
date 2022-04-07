@@ -10,6 +10,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  /* font-family: var(--font-pop); */
+  font-family: var(--font-sen);
 }
 
 :root {
@@ -17,6 +19,9 @@
   --color-primary-text: #ffffff;
   --color-primary-text2: #9C9C9C;
   --color-primary-text3: #A7A7A7;
+  --color-primary-accent: #F4BE24;
+
+
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;

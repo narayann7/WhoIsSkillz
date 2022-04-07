@@ -1,9 +1,9 @@
 import React from "react";
 import "./home.css";
-import google from "../../assets/icons/Google_bw.png";
 function home() {
   return (
-    <section className="main_section  just-center-r">
+    <section className="main_home_section  just-center-r">
+      
       <div className="main_container just-center-c">
         <div className="center_container just-center-c">
           <h4>Hello 👋 , I’m</h4>
