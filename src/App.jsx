@@ -9,12 +9,13 @@ import Header from "./components/header/header.jsx";
 function App() {
   return (
     <div class="main_div">
-      <Header  />
-      <Home  />
-  
+      <Header />
+      <Home />
+
       <About />
       <Experience />
       <Projects />
+
       <Contact />
       <Footer />
       <Experience />

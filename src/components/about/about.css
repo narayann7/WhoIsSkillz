@@ -1,6 +1,10 @@
  .main_about_section{
-    height: 100vh;
-    width: 100vw;
 
+  
 }
 
+.about_container{
+    height: 100vh;
+    width: 74vw;
+
+}

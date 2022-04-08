@@ -8,23 +8,29 @@ function header() {
       <div className="nav_bar ">
         <div className="nav_left ">
           <div className="lp">
+            <a  
+            className="lp_logo_text"
+            href="#"> 
+            
             <img className="LP_logo" src={lp_logo} alt="lp_logo" />
+            
+               </a>
           </div>
         </div>
         <div className="nav_right">
-          <div className="about nav_items_p">
+          <div className="about nav_items_p just-center-c">
             <a href="#about" className="about_link">
               <h3>about</h3>
             </a>
             <div className="about_line"></div>
           </div>
-          <div className="experience nav_items_p">
+          <div className="experience nav_items_p just-center-c">
             <a href="#" className="experience_link">
               <h3>experience</h3>
             </a>
             <div className="experience_line"></div>
           </div>
-          <div className="projets">
+          <div className="projets just-center-c">
             <a href="#" className="projets_link">
               <h3>projets</h3>
             </a>

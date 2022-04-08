@@ -70,3 +70,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+@keyframes just_bounce {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
