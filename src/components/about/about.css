@@ -1,6 +1,74 @@
+.about_container {
+  height: 100vh;
+  width: 74vw;
+}
+.about_container .about_left {
+  height: 100vh;
+  width: 20vw;
+  background-color: aliceblue;
+}
+.about_container .about_right {
+  height: 100vh;
+  width: 54vw;
+  background-color: aqua;
+}
+.about_socials {
+  position: static;
+  margin-bottom: 50px;
+  /* bottom: 10vh;
+      right: 13vw;
+      position: absolute;
+      overflow:  hidden; */
+  animation: 0.5s ease-out 0s 1 just_bounce;
+  align-self: flex-end;
+}
 
-.about_container{
-    height: 100vh;
-    width: 74vw;
+.about_socials .twitter:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/Twitter.png") no-repeat;
+}
 
+.about_socials .twitter {
+  margin-bottom: 10px;
+  width: 40px;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  height: 40px;
+  background: url("../../assets/icons/Twitter_bw.png") no-repeat;
+  display: inline-block;
+}
+
+.about_socials .instagram:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/Instagram.png") no-repeat;
+}
+
+.about_socials .instagram {
+  margin-bottom: 10px;
+  width: 40px;
+  background-size: 40px 40px;
+
+  height: 40px;
+  background: url("../../assets/icons/Instagram_bw.png") no-repeat;
+  display: inline-block;
+}
+
+.about_socials .twitter:hover {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.05);
+  background: url("../../assets/icons/Twitter.png") no-repeat;
+}
+
+.about_socials .twitter {
+  width: 40px;
+  margin-bottom: 10px;
+  background-size: 40px 40px;
+  height: 40px;
+  background: url("../../assets/icons/Twitter_bw.png") no-repeat;
+  display: inline-block;
 }

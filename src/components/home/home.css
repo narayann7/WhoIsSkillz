@@ -110,26 +110,7 @@ margin-bottom: 50px;
 .home_socials div {
   margin-top: 5px;
 }
-.home_socials .linkedin {
-margin-bottom: 10px;
-  height: 40px;
-  width: 40px;
-  background-color: aquamarine;
-}
 
-.home_socials .github {
-margin-bottom: 10px;
-height: 40px;
-  width: 40px;
-  background-color: aquamarine;
-}
-
-.home_socials .gmail {
-margin-bottom: 10px;
-height: 40px;
-  width: 40px;
-  background-color: aquamarine;
-}
 
 
 .home_socials .gmail:hover {
@@ -140,7 +121,8 @@ height: 40px;
 }
 
 .home_socials .gmail {
-  width: 40px;
+margin-bottom: 10px;
+width: 40px;
   height: 40px;
   background: url("../../assets/icons/Google_bw.png") no-repeat;
   display: inline-block;
@@ -154,7 +136,8 @@ height: 40px;
 }
 
 .home_socials .github {
-  width: 40px;
+margin-bottom: 10px;
+width: 40px;
   height: 40px;
   background: url("../../assets/icons/GitHub_bw.png") no-repeat;
   display: inline-block;
@@ -168,9 +151,10 @@ height: 40px;
 }
 
 .home_socials .linkedin {
-  width: 40px;
+margin-bottom: 10px;
+width: 40px;
   height: 40px;
-  background: url("../../assets/icons/linkedin_bg.png") no-repeat;
+  background: url("../../assets/icons/linkedin_bw.png") no-repeat;
   display: inline-block;
 }
 
