@@ -179,9 +179,9 @@ height: 40px;
 
   margin: 20px;
   justify-content: center;
-  width: 115px;
+  width: 120px;
   height: 45px;
-  background-color: rgba(244.37, 189.81, 36.05, 1);
+ background-color: #f4be24;
   border-radius: 14px;
   border-width: 4px;
   border-style: solid;
@@ -191,9 +191,19 @@ height: 40px;
 
 .resume_button:hover {
 transform: scale(1.04);
+background-color: #F2BB1E;
+justify-content: center;
+
+
 }
 .resume_button h5 {
-  font-size:18px;
+  font-size:16px;
   color: var(--color-primary-background);
   font-family: var(--font-pop);
+}
+.resume_button .link_logo{
+  margin-left: 5px;
+
+  width: 19px;
+  height: 19px;
 }

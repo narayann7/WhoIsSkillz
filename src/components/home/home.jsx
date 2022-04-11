@@ -4,6 +4,7 @@ import { resume_link } from "../../utility/links.js";
 import { linkedin_link } from "../../utility/links.js";
 import { github_link } from "../../utility/links.js";
 import { gmail_link } from "../../utility/links.js";
+import link_logo from "../../assets/icons/ExternalLink.png";
 function home() {
   return (
     <section className="main_home_section  just-center-r">
@@ -20,7 +21,7 @@ function home() {
                 <h3>Backend enthusiastic .</h3>{" "}
               </span>
               <span>
-                <h3>Problem Slover . </h3>{" "}
+                <h3>Problem Solver . </h3>{" "}
               </span>
               <span>
                 <h3>Backend enthusiastic .</h3>{" "}
@@ -32,9 +33,11 @@ function home() {
           </div>
 
           <a href={resume_link} className="resume_link_c" target="_blank">
-            <div className="resume_button just-center-c">
+            <div className="resume_button just-center-r">
               <h5>Resume</h5>
+              <img className="link_logo" src={link_logo} alt="link_logo" />
             </div>
+      
           </a>
         </div>
       
