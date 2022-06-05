@@ -165,7 +165,7 @@ width: 40px;
   justify-content: center;
   width: 120px;
   height: 45px;
- background-color: #f4be24;
+ background-color: #6EB69D;
   border-radius: 14px;
   border-width: 4px;
   border-style: solid;
@@ -175,7 +175,7 @@ width: 40px;
 
 .resume_button:hover {
 transform: scale(1.04);
-background-color: #F2BB1E;
+background-color: #6eb69c;
 justify-content: center;
 
 

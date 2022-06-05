@@ -10,7 +10,7 @@ function home() {
     <section className="main_home_section  just-center-r">
       <div className="main_container just-center-c">
         <div className="center_container just-center-c">
-          <h4>Hello 👋 , I’m</h4>
+          <h4>Hello 👋🏻 , I’m</h4>
           <h1>Laxmi Narayan</h1>
           <div class="imWrapper">
             <div class="words just-center-c ">
@@ -32,7 +32,7 @@ function home() {
             </div>
           </div>
 
-          <a href={resume_link} className="resume_link_c" target="_blank">
+          <a href={resume_link} className="resume_link_c" target="_blank" rel="noreferrer">
             <div className="resume_button just-center-r">
               <h5>Resume</h5>
               <img className="link_logo" src={link_logo} alt="link_logo" />
@@ -44,9 +44,9 @@ function home() {
       </div>
 
       <div class="home_socials just-center-c">
-        <a href={linkedin_link} target="_blank" className="linkedin"></a>
-        <a href={github_link} target="_blank" className="github"></a>
-        <a href={gmail_link} target="_blank" className="gmail"></a>
+        <a href={linkedin_link} target="_blank" className="linkedin" rel="noreferrer"></a>
+        <a href={github_link} target="_blank" className="github" rel="noreferrer"></a>
+        <a href={gmail_link} target="_blank" className="gmail" rel="noreferrer"></a>
 
 
       </div>
