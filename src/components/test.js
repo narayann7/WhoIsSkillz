@@ -1,12 +1,23 @@
+import { Box, Button } from "@mui/material";
 import React from "react";
-import Box from "./../../node_modules/@mui/system/esm/Box/Box";
+import { useRootContext } from "../context_api/root_context";
 
 function Test() {
+  const { switchTheme } = useRootContext();
+
   return (
     <div
-    
+      style={{
+        postion: "fixed",
+      }}
     >
-      <Box>Test</Box>
+      <Button
+        onClick={() => {
+          switchTheme();
+        }}
+      >
+        Landing
+      </Button>
     </div>
   );
 }

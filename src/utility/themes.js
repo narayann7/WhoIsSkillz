@@ -17,6 +17,7 @@ const DarkTheme = createTheme({
       paper: "#0c111a",
     },
     text: {
+      primary: "#ffffff",
       secondary: "#a7a7a7",
       disabled: "#9c9c9c",
     },
@@ -27,6 +28,8 @@ const DarkTheme = createTheme({
       main: "#1F2232",
     },
   },
+  
+
 });
 const LightTheme = createTheme({
   palette: {
@@ -47,7 +50,7 @@ const LightTheme = createTheme({
     },
     text: {
       secondary: "#000000",
-      primary: "rgba(0,0,0,0.87)",
+      primary: "#000000",
       disabled: "#3a3a3a",
       hint: "#757575",
     },

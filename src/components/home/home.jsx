@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import { resume_link } from "../../utility/links.js";
 import { linkedin_link } from "../../utility/links.js";
 import { github_link } from "../../utility/links.js";

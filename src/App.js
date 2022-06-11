@@ -16,8 +16,7 @@ import { useRootContext } from "./context_api/root_context";
 function App() {
   const { isDark } = useRootContext();
 
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
@@ -32,11 +31,11 @@ function App() {
           <Route
             path="/"
             element={
-              <>
+              <div>
+                <Test />
                 <Landing />
-                {/* <About />
-                <Test /> */}
-              </>
+                <About />
+              </div>
             }
           />
         </Route>
