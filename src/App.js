@@ -1,37 +1,49 @@
-import React from "react";
+import { React, useEffect } from "react";
 import Home from "./components/home/home.jsx";
 import Header from "./components/header/header.jsx";
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Root from "./components/root.js";
 import Test from "./components/test";
 import Landing from "./components/landing";
 import About from "./components/about";
+import { ThemeProvider } from "@emotion/react";
+import { useState } from "react";
+import themes from "./utility/themes";
+import AppTheme from "./utility/local_storage.js";
+import { useRootContext } from "./context_api/root_context";
 
 function App() {
+  const { isDark } = useRootContext();
+
+  useEffect(() => {
+  }, []);
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Root />
-          </>
-        }
-      >
+    <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
+      <Routes>
         <Route
           path="/"
           element={
             <>
-              <Landing />
-              <About />
+              <Root />
             </>
           }
-        />
-      </Route>
+        >
+          <Route
+            path="/"
+            element={
+              <>
+                <Landing />
+                {/* <About />
+                <Test /> */}
+              </>
+            }
+          />
+        </Route>
 
-      <Route path="/*" element={<Error></Error>}></Route>
-    </Routes>
+        <Route path="/*" element={<Error></Error>}></Route>
+      </Routes>
+    </ThemeProvider>
 
     // <div class="main_div">
     //   <Header />

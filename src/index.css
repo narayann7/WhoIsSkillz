@@ -10,7 +10,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  /* font-family: var(--font-pop); */
+  font-family: var(--font-pop);
   font-family: var(--font-sen);
 }
 
@@ -75,6 +75,7 @@ html {
 
 body {
   font-family: var(--font-pop);
+  
   /* font-family: var(--font-sen); */
 
   /* background: var(--color-primary-background); */
