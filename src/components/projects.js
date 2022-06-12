@@ -2,14 +2,14 @@ import { Button, Card } from "@mui/material";
 import React from "react";
 import common_styles from "../components/common_styles";
 const { BackgroundCard, CenterCard } = common_styles;
-function About() {
+function Projects() {
   return (
-    <BackgroundCard id="about">
+    <BackgroundCard id="projects">
       <CenterCard>
-        <Button onClick={() => {}}>About</Button>
+        <Button onClick={() => {}}>Projects</Button>
       </CenterCard>
     </BackgroundCard>
   );
 }
 
-export default About;
+export default Projects;

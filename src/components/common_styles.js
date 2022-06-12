@@ -21,14 +21,17 @@ const CenterCard = styled(Box)(({ theme }) => ({
   alignItems: "center",
   flexDirection: "column",
 }));
+
 const Text = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   color: theme.palette.text.primary,
 }));
+
+
 const common_styles = {
   BackgroundCard,
   CenterCard,
-  Text
+  Text,
 };
 
 export default common_styles;

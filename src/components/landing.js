@@ -13,12 +13,12 @@ const iam = [
   "App Developer .",
 ];
 function Landing() {
-  const { switchTheme } = useRootContext();
+  const { switchTheme, isDark } = useRootContext();
 
   return (
-    <BackgroundCard>
+    <BackgroundCard id="landing">
       <CenterCard>
-        <Text variant="h4">Hello 👋🏻 , I’m</Text>
+        <Text variant="h4">{`Hello ${isDark ? "👋🏻" : "👋"} , I’m`}</Text>
         <Text variant="h2">Laxmi Narayan</Text>
         <IamSpinner />
       </CenterCard>

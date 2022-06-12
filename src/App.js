@@ -1,6 +1,5 @@
 import { React, useEffect } from "react";
 import Home from "./components/home/home.jsx";
-import Header from "./components/header/header.jsx";
 import { Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Root from "./components/root.js";
@@ -12,6 +11,9 @@ import { useState } from "react";
 import themes from "./utility/themes";
 import AppTheme from "./utility/local_storage.js";
 import { useRootContext } from "./context_api/root_context";
+import Header from "./components/header.js";
+import Experience from "./components/experience.js";
+import Projects from "./components/projects";
 
 function App() {
   const { isDark } = useRootContext();
@@ -31,11 +33,13 @@ function App() {
           <Route
             path="/"
             element={
-              <div>
-                <Test />
+              <>
+                <Header />
                 <Landing />
                 <About />
-              </div>
+                <Experience />
+                <Projects />
+              </>
             }
           />
         </Route>

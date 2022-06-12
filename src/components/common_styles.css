@@ -1,12 +1,12 @@
+/* landing-animation----------------------------------- */
 .imWrapper {
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: center;
   flex-direction: column;
   box-sizing: content-box;
 }
-
-
 
 .imWrapper .words {
   height: 3.5rem;
@@ -50,3 +50,5 @@
     transform: translateY(-400%);
   }
 }
+
+/* darkmode switch----------------------------------- */
