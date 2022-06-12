@@ -12,26 +12,45 @@ const BackgroundCard = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
 }));
 
+const CenterCardLanding = styled(Box)(({ theme }) => ({
+  // [theme.breakpoints.up("sm")]: {
+  //   color: "red",
+  // },
+  [theme.breakpoints.up("md")]: {
+    alignItems: "self-start",
+  },
+  [theme.breakpoints.up("lg")]: {
+    alignItems: "center",
+  },
+  height: "100%",
+  width: "64%",
+  display: "flex",
+  justifyContent: "center",
+
+  flexDirection: "column",
+}));
 const CenterCard = styled(Box)(({ theme }) => ({
   // backgroundColor: theme.palette.background.paper,
   height: "100%",
   width: "64%",
   display: "flex",
   justifyContent: "center",
+  // alignItems: "self-start",
   alignItems: "center",
+
   flexDirection: "column",
 }));
 
 const Text = styled(Typography)(({ theme }) => ({
-  fontFamily: "Poppins",
+  fontFamily: "Sen",
   color: theme.palette.text.primary,
 }));
-
 
 const common_styles = {
   BackgroundCard,
   CenterCard,
   Text,
+  CenterCardLanding,
 };
 
 export default common_styles;

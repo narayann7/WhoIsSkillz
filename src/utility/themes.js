@@ -28,8 +28,15 @@ const DarkTheme = createTheme({
       main: "#1F2232",
     },
   },
-  
-
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 300,
+      md: 600,
+      lg: 900,
+      xl: 1536,
+    },
+  },
 });
 const LightTheme = createTheme({
   palette: {
@@ -61,6 +68,15 @@ const LightTheme = createTheme({
       main: "#1F2232",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 300,
+      md: 600,
+      lg: 900,
+      xl: 1536,
+    },
+  },
 });
 
 const themes = {
@@ -69,37 +85,3 @@ const themes = {
 };
 
 export default themes;
-// // import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
-
-// export const themeOptions: ThemeOptions = {
-//   palette: {
-//     type: 'light',
-//     primary: {
-//       main: '#035a69',
-//       light: '#006775',
-//       dark: '#013f48',
-//     },
-//     secondary: {
-//       main: '#ecb75e',
-//     },
-//     background: {
-//       default: '#CECECE',
-//       paper: '#9ebfb4',
-//     },
-//     text: {
-//       secondary: '#000000',
-//       primary: 'rgba(0,0,0,0.87)',
-//     },
-//     info: {
-//       main: '#FDE8E9',
-//     },
-//     warning: {
-//       main: '#1F2232',
-//     },
-//   },
-//   typography: {
-//     h3: {
-//       fontSize: '2.3rem',
-//     },
-//   },
-// };

@@ -1,15 +1,13 @@
 import React from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
-import { Avatar, Button, CardMedia, useTheme } from "@mui/material";
-import images from "../assets/base_assets";
+import { useTheme } from "@mui/material";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { Box } from "@mui/system";
-const { BackgroundCard, CenterCard, Text } = common_styles;
+const { BackgroundCard, Text } = common_styles;
 
 function Header() {
   const { switchTheme, isDark } = useRootContext();
-  const theme = useTheme();
   const headerArr = ["about", "experience", "projects"];
   const headerHref = ["#about", "#experience", "#projects"];
   return (
@@ -34,17 +32,17 @@ function Header() {
           alignItems: "center",
           flexDirection: "column",
           backgroundColor: isDark ? "#0c111a" : "#9ebfb4",
-          height: "35px",
-          width: "35px",
+          height: "40px",
+          width: "40px",
           borderRadius: "12px",
         }}
       >
         <a href="#landing">
           <Text
             sx={{
-              fontStyle: "Sen",
+              fontFamily: "Poppins",
               fontSize: "1.2vw",
-              fontWeight: "500",
+              fontWeight: "700",
               letterSpacing: "0.1rem",
               "&:hover": {
                 color: isDark ? "#6EB69D" : "#035a69",
@@ -105,7 +103,7 @@ function Header() {
           }}
           onClick={switchTheme}
         >
-          {isDark ? <HiOutlineMoon /> : <HiOutlineSun color="black" />}
+          {isDark ?<HiOutlineSun /> : <HiOutlineMoon color="black" />}
         </Box>
       </Box>
     </BackgroundCard>

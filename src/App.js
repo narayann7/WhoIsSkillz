@@ -1,15 +1,11 @@
 import { React, useEffect } from "react";
-import Home from "./components/home/home.jsx";
 import { Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Root from "./components/root.js";
-import Test from "./components/test";
 import Landing from "./components/landing";
 import About from "./components/about";
 import { ThemeProvider } from "@emotion/react";
-import { useState } from "react";
 import themes from "./utility/themes";
-import AppTheme from "./utility/local_storage.js";
 import { useRootContext } from "./context_api/root_context";
 import Header from "./components/header.js";
 import Experience from "./components/experience.js";
