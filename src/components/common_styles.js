@@ -16,12 +16,7 @@ const CenterCardLanding = styled(Box)(({ theme }) => ({
   // [theme.breakpoints.up("sm")]: {
   //   color: "red",
   // },
-  [theme.breakpoints.up("md")]: {
-    alignItems: "self-start",
-  },
-  [theme.breakpoints.up("lg")]: {
-    alignItems: "center",
-  },
+
   height: "100%",
   width: "64%",
   display: "flex",

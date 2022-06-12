@@ -32,7 +32,7 @@ const DarkTheme = createTheme({
     values: {
       xs: 0,
       sm: 300,
-      md: 600,
+      md: 500,
       lg: 900,
       xl: 1536,
     },
@@ -72,7 +72,7 @@ const LightTheme = createTheme({
     values: {
       xs: 0,
       sm: 300,
-      md: 600,
+      md: 500,
       lg: 900,
       xl: 1536,
     },

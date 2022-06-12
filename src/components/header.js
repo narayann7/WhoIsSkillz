@@ -1,13 +1,12 @@
 import React from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
-import { useTheme } from "@mui/material";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { Box } from "@mui/system";
 const { BackgroundCard, Text } = common_styles;
 
 function Header() {
-  const { switchTheme, isDark } = useRootContext();
+  const { switchTheme, isDark, Mq } = useRootContext();
   const headerArr = ["about", "experience", "projects"];
   const headerHref = ["#about", "#experience", "#projects"];
   return (
@@ -41,7 +40,7 @@ function Header() {
           <Text
             sx={{
               fontFamily: "Poppins",
-              fontSize: "1.2vw",
+              fontSize: "1.2rem",
               fontWeight: "700",
               letterSpacing: "0.1rem",
               "&:hover": {
@@ -63,33 +62,34 @@ function Header() {
           flexDirection: "row",
         }}
       >
-        <Box
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            flexDirection: "row",
-          }}
-        >
-          {headerArr.map((header, index) => {
-            return (
-              <a href={headerHref[index]}>
-                <Text
-                  sx={{
-                    paddingRight: "2vw",
-                    "&:hover": {
-                      color: isDark ? "#6EB69D" : "#035a69",
-                      cursor: "pointer",
-                    },
-                  }}
-                >
-                  {header}
-                </Text>
-              </a>
-            );
-          })}
-        </Box>
-
+        {!Mq.sm && (
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            {headerArr.map((header, index) => {
+              return (
+                <a key={index} href={headerHref[index]}>
+                  <Text
+                    sx={{
+                      paddingRight: "2vw",
+                      "&:hover": {
+                        color: isDark ? "#6EB69D" : "#035a69",
+                        cursor: "pointer",
+                      },
+                    }}
+                  >
+                    {header}
+                  </Text>
+                </a>
+              );
+            })}
+          </Box>
+        )}
         <Box
           sx={{
             display: "flex",
@@ -103,7 +103,7 @@ function Header() {
           }}
           onClick={switchTheme}
         >
-          {isDark ?<HiOutlineSun /> : <HiOutlineMoon color="black" />}
+          {isDark ? <HiOutlineSun /> : <HiOutlineMoon color="black" />}
         </Box>
       </Box>
     </BackgroundCard>
