@@ -12,7 +12,7 @@ function Error() {
       }}
     >
       <h2>404 Page Not Found ☹️</h2>
-      <Link to={"/whoisNarayan"}>go back</Link>
+      <Link to={"/who-is-skillz"}>go back</Link>
     </div>
   );
 }

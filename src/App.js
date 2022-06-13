@@ -18,9 +18,9 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
-        <Route path="/" element={<Navigate to="/whoisNarayan" />} />
+        <Route path="/" element={<Navigate to="/who-is-skillz" />} />
         <Route
-          path="/whoisNarayan"
+          path="/who-is-skillz"
           element={
             <>
               <Header />
