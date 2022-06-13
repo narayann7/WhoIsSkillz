@@ -19,27 +19,17 @@ function App() {
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
         <Route
-          path="/"
+          path="/who-is-skillz"
           element={
             <>
-              <Root />
+              <Header />
+              <Landing />
+              <About />
+              <Experience />
+              <Projects />
             </>
           }
-        >
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-        
-                <Landing />
-                <About />
-                <Experience />
-                <Projects />
-              </>
-            }
-          />
-        </Route>
+        />
 
         <Route path="/*" element={<Error></Error>}></Route>
       </Routes>
