@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/who-is-skillz" />} />
         <Route
-          path="/who-is-skillz"
+          path="/whoisNarayan"
           element={
             <>
               <Header />
