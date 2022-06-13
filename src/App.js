@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Root from "./components/root.js";
 import Landing from "./components/landing";
@@ -18,6 +18,7 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
+        <Route path="/" element={<Navigate to="/who-is-skillz" />} />
         <Route
           path="/who-is-skillz"
           element={

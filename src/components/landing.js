@@ -5,6 +5,7 @@ import { useRootContext } from "../context_api/root_context";
 import { HiExternalLink } from "react-icons/hi";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import common_styles from "../components/common_styles";
+import { AllSocial, SocialIcons } from "./header";
 
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
@@ -125,6 +126,23 @@ function Landing() {
             color={isDark ? "black" : "white"}
           />
         </Button>
+      {
+        Mq.sm && (
+          <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "end",
+            flexdirection: "row",
+            marginTop: "15px",
+            width: "40vw",
+            height: "5vh                           ",
+          }}
+        >
+          <AllSocial isDark={isDark} />
+        </div>
+        )
+      }
       </CenterCardLanding>
 
       {Mq.sm && (
@@ -145,7 +163,7 @@ function Landing() {
               justifyContent: "space-evenly",
               alignItems: "center",
               flexDirection: "column",
-              backgroundColor: isDark ? "#0c111a" : "#9ebfb4",
+              backgroundColor: isDark ? "#102027" : "#9ebfb4",
               height: "40px",
               width: "40px",
               borderRadius: "12px",

@@ -7,7 +7,7 @@ const RootProvider = (props) => {
   const [isDark, setisDark] = useState(true);
   const Mq = {
     esm: useMediaQuery("(min-width:400px)"),
-    sm: useMediaQuery("(max-width:680px)"),
+    sm: useMediaQuery("(max-width:600px)"),
     bsm: useMediaQuery("(max-width:730px)"),
     md: useMediaQuery("(max-width:900px)"),
     lg: useMediaQuery("(min-width:900px)"),
