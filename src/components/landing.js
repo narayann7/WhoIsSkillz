@@ -31,6 +31,7 @@ function Landing() {
                 paddingBottom: "10vh",
               }
             : {
+                paddingTop: "6vh",
                 alignItems: "center",
               }
         }
