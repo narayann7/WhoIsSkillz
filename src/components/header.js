@@ -4,7 +4,6 @@ import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
 import { RiStackOverflowLine } from "react-icons/ri";
 import { MdAlternateEmail } from "react-icons/md";
-
 import { FiGithub } from "react-icons/fi";
 import { VscTwitter } from "react-icons/vsc";
 import {
@@ -25,67 +24,16 @@ function Header() {
   const headerHref = ["#about", "#experience", "#projects"];
   return (
     <>
-      <BackgroundCard
-        style={{
-          height: "10vh",
-          paddingTop: "2vh",
-          position: "fixed",
-          display: "flex",
-          justifyContent: "space-between",
-          paddingLeft: "8vw",
-          paddingRight: "8vw",
-          alignItems: "center",
-          color: "white",
-          opacity: "0.9",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            flexDirection: "column",
-            backgroundColor: isDark ? "#102027" : "#9ebfb4",
-            height: "40px",
-            width: "40px",
-            borderRadius: "12px",
-          }}
-        >
+      <BackgroundCard style={BackgroundCardStyle()}>
+        <Box sx={headerBoxStyle()}>
           <a href="#landing">
-            <Text
-              sx={{
-                fontFamily: "Poppins",
-                fontSize: "1.2rem",
-                fontWeight: "700",
-                letterSpacing: "0.1rem",
-                "&:hover": {
-                  color: isDark ? "#6EB69D" : "#035a69",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              Lx
-            </Text>
+            <Text sx={lxStyle()}>Lx</Text>
           </a>
         </Box>
 
-        <Box
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            flexDirection: "row",
-          }}
-        >
+        <Box style={rowCenterSpaceevely()}>
           {!Mq.sm && (
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignItems: "center",
-                flexDirection: "row",
-              }}
-            >
+            <Box style={rowCenterSpaceevely()}>
               {headerArr.map((header, index) => {
                 return (
                   <a key={index} href={headerHref[index]}>
@@ -105,19 +53,7 @@ function Header() {
               })}
             </Box>
           )}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              flexDirection: "column",
-              backgroundColor: isDark ? "#102027" : "#9ebfb4",
-              height: "37px",
-              width: "37px",
-              borderRadius: "12px",
-            }}
-            onClick={switchTheme}
-          >
+          <Box sx={darkModeSwitchStyle()} onClick={switchTheme}>
             {isDark ? (
               <HiOutlineSun size={20} />
             ) : (
@@ -129,48 +65,73 @@ function Header() {
       {!Mq.md && (
         <>
           <SideSocial isDark={isDark} />
-
-          {/* <div
-            className="social_icons"
-            onClick={() => {
-              window.open(gmail_link, "_blank");
-            }}
-            style={{
-              right: "6.5vw",
-              bottom: "-2vh",
-              position: "fixed",
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              flexDirection: "column",
-              backgroundColor: "transparent",
-              height: "55vh",
-              width: "10vh",
-            }}
-          >
-            <Text
-              style={{
-                marginBottom: "2vh",
-                textOrientation: "mixed",
-                writingMode: "vertical-lr",
-                cursor: "pointer",
-              }}
-            >
-              laxminarayanreddy432@gmail.com
-            </Text>
-
-            <div
-              style={{
-                backgroundColor: isDark ? "white" : "black",
-                height: "20vh",
-                width: "1.5px",
-              }}
-            ></div>
-          </div> */}
         </>
       )}
     </>
   );
+
+  function rowCenterSpaceevely() {
+    return {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+      flexDirection: "row",
+    };
+  }
+
+  function lxStyle() {
+    return {
+      fontFamily: "Poppins",
+      fontSize: "1.2rem",
+      fontWeight: "700",
+      letterSpacing: "0.1rem",
+      "&:hover": {
+        color: isDark ? "#6EB69D" : "#035a69",
+        cursor: "pointer",
+      },
+    };
+  }
+
+  function darkModeSwitchStyle() {
+    return {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+      flexDirection: "column",
+      backgroundColor: isDark ? "#102027" : "#9ebfb4",
+      height: "37px",
+      width: "37px",
+      borderRadius: "12px",
+    };
+  }
+
+  function headerBoxStyle() {
+    return {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+      flexDirection: "column",
+      backgroundColor: isDark ? "#102027" : "#9ebfb4",
+      height: "40px",
+      width: "40px",
+      borderRadius: "12px",
+    };
+  }
+
+  function BackgroundCardStyle() {
+    return {
+      height: "10vh",
+      paddingTop: "2vh",
+      position: "fixed",
+      display: "flex",
+      justifyContent: "space-between",
+      paddingLeft: "8vw",
+      paddingRight: "8vw",
+      alignItems: "center",
+      color: "white",
+      opacity: "0.9",
+    };
+  }
 }
 
 export default Header;
@@ -306,33 +267,3 @@ export const AllSocial = ({ isDark }) => {
     </>
   );
 };
-
-// const LpLogo = () => {
-//   return (
-//     <div
-//       style={{
-//         marginLeft: "10vw",
-//         marginTop: "2vh",
-//         borderRadius: "50%",
-//       }}
-//     >
-//       <Avatar
-//         style={{
-//           height: "50px",
-//           width: "50px",
-//           backgroundColor: "transparent",
-//         }}
-//         className="add_friend"
-//       >
-//         {/* <CardMedia
-//           style={{
-//             height: "60px",
-//             width: "60px",
-//           }}
-//           component="img"
-//           image={images.lp_logo}
-//         /> */}
-//       </Avatar>
-//     </div>
-//   );
-// };

@@ -5,7 +5,7 @@ import { useRootContext } from "../context_api/root_context";
 import { HiExternalLink } from "react-icons/hi";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import common_styles from "../components/common_styles";
-import { AllSocial, SocialIcons } from "./header";
+import { AllSocial } from "./header";
 
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
@@ -66,8 +66,9 @@ function Landing() {
           <div
             className="words"
             style={{
-              height: Mq.sm ? "2.5rem" : "3.5rem",
-              marginTop: Mq.sm ? "10px" : "0",
+              height: Mq.sm ? "2.2rem" : "3.5rem",
+              marginTop: Mq.sm ? "8px" : "0",
+              marginBottom: "5px",
               display: "flex",
               alignItems: Mq.sm ? "flex-start" : "center",
               justifyContent: "flex-start",
@@ -93,92 +94,100 @@ function Landing() {
             })}
           </div>
         </div>
-        <Button
-          onClick={() => {
-            window.open(resume_link, "_blank");
-          }}
-          style={{
-            paddingLeft: Mq.sm ? "5px" : "20px",
-            paddingRight: Mq.sm ? "5px" : "20px",
-            paddingTop: Mq.sm ? "2px" : "8px",
-            paddingBottom: Mq.sm ? "2px" : "8px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textTransform: "none",
-            borderRadius: Mq.sm ? "0.4rem" : "0.9rem",
-            border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
-            marginTop: Mq.sm ? "10px" : "30px",
-            backgroundColor: isDark ? "#6EB69D" : "#035a69",
-          }}
-        >
-          <Text
+        {ResumeButton(Mq, isDark)}
+        {Mq.sm && (
+          <div
             style={{
-              fontWeight: "700",
-              letterSpacing: "0.05rem",
-              color: isDark ? "black" : "white",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "end",
+              flexdirection: "row",
+              marginTop: "15px",
+              width: "40vw",
+              height: "5vh                           ",
             }}
           >
-            Resume
-          </Text>
-          <HiExternalLink
-            size={Mq.sm ? "1rem" : "1.2rem"}
-            color={isDark ? "black" : "white"}
-          />
-        </Button>
-      {
-        Mq.sm && (
-          <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-            flexdirection: "row",
-            marginTop: "15px",
-            width: "40vw",
-            height: "5vh                           ",
-          }}
-        >
-          <AllSocial isDark={isDark} />
-        </div>
-        )
-      }
+            <AllSocial isDark={isDark} />
+          </div>
+        )}
       </CenterCardLanding>
 
-      {Mq.sm && (
-        <a href={headerHref[currentIndex]}>
-          <Box
-            onClick={() => {
-              if (currentIndex < headerHref.length - 1) {
-                setcurrentIndex(currentIndex + 1);
-              } else {
-                setcurrentIndex(0);
-              }
-            }}
-            sx={{
-              right: "35px",
-              bottom: "35px",
-              position: "fixed",
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              flexDirection: "column",
-              backgroundColor: isDark ? "#102027" : "#9ebfb4",
-              height: "40px",
-              width: "40px",
-              borderRadius: "12px",
-            }}
-          >
-            {currentIndex === headerHref.length - 1 ? (
-              <FaAngleDoubleUp color={isDark ? "white" : "black"} />
-            ) : (
-              <FaAngleDoubleDown color={isDark ? "white" : "black"} />
-            )}
-          </Box>
-        </a>
-      )}
+      {Mq.sm &&
+        floatingAction(headerHref, currentIndex, setcurrentIndex, isDark)}
     </BackgroundCard>
   );
 }
 
 export default Landing;
+function floatingAction(headerHref, currentIndex, setcurrentIndex, isDark) {
+  return (
+    <a href={headerHref[currentIndex]}>
+      <Box
+        onClick={() => {
+          if (currentIndex < headerHref.length - 1) {
+            setcurrentIndex(currentIndex + 1);
+          } else {
+            setcurrentIndex(0);
+          }
+        }}
+        sx={{
+          right: "35px",
+          bottom: "35px",
+          position: "fixed",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundColor: isDark ? "#102027" : "#9ebfb4",
+          height: "40px",
+          width: "40px",
+          borderRadius: "12px",
+        }}
+      >
+        {currentIndex === headerHref.length - 1 ? (
+          <FaAngleDoubleUp color={isDark ? "white" : "black"} />
+        ) : (
+          <FaAngleDoubleDown color={isDark ? "white" : "black"} />
+        )}
+      </Box>
+    </a>
+  );
+}
+
+function ResumeButton(Mq, isDark) {
+  return (
+    <Button
+      onClick={() => {
+        window.open(resume_link, "_blank");
+      }}
+      style={{
+        paddingLeft: Mq.sm ? "5px" : "20px",
+        paddingRight: Mq.sm ? "5px" : "20px",
+        paddingTop: Mq.sm ? "2px" : "8px",
+        paddingBottom: Mq.sm ? "2px" : "8px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textTransform: "none",
+        borderRadius: Mq.sm ? "0.4rem" : "0.9rem",
+        border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
+        marginTop: Mq.sm ? "10px" : "30px",
+        backgroundColor: isDark ? "#6EB69D" : "#035a69",
+      }}
+    >
+      <Text
+        style={{
+          fontWeight: "700",
+          letterSpacing: "0.05rem",
+          color: isDark ? "black" : "white",
+        }}
+      >
+        Resume
+      </Text>
+      <HiExternalLink
+        size={Mq.sm ? "1rem" : "1.2rem"}
+        color={isDark ? "black" : "white"}
+      />
+    </Button>
+  );
+}
