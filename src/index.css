@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&family=Sen:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&family=Sen:wght@400;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +11,10 @@
   font-family: var(--font-pop);
   font-family: var(--font-sen);
   scrollbar-width: thin;
-  scrollbar-color: #6EB69D #0c111a;
-  
+  scrollbar-color: #6eb69d #0c111a;
 }
 
-
 :root {
-
-
   /* fonts */
   --font-sen: "Sen", sans-serif;
   --font-pop: "Poppins", sans-serif;
@@ -58,14 +54,56 @@ body {
   align-items: center;
   justify-content: center;
 }
-@keyframes just_bounce {
-  0% {
-    transform: translateY(-10%);
+/* landing-animation----------------------------------- */
+.imWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+
+.imWrapper .words span {
+  font-size: 2.7rem;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: var(--font-sen);
+  animation: spin_words 7s infinite;
+}
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+
+  35% {
+    transform: translateY(-212%);
   }
   50% {
-    transform: translateY(3%);
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  80% {
+    transform: translateY(-412%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-400%);
   }
+}
+
+.social_icons :hover {
+  color: #46826d;
+  transform: translateY(-1.5px);
+}
+.social_icons {
+  transition: transform 200ms;
 }

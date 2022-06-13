@@ -5,7 +5,6 @@ import { useRootContext } from "../context_api/root_context";
 import { HiExternalLink } from "react-icons/hi";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import common_styles from "../components/common_styles";
-import "./common_styles.css";
 
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
@@ -25,9 +24,16 @@ function Landing() {
   return (
     <BackgroundCard id="landing">
       <CenterCardLanding
-        style={{
-          alignItems: Mq.sm ? "flex-start" : "center",
-        }}
+        style={
+          Mq.sm
+            ? {
+                alignItems: "flex-start",
+                paddingBottom: "10vh",
+              }
+            : {
+                alignItems: "center",
+              }
+        }
       >
         <Text
           style={
@@ -41,7 +47,7 @@ function Landing() {
                 }
           }
         >
-          {`Helloo ${isDark ? "👋🏻" : "👋🏿"}, I’m`}
+          {`Hello ${isDark ? "👋🏻" : "👋🏿"}, I’m`}
         </Text>
         <Text
           style={{
@@ -99,7 +105,7 @@ function Landing() {
             alignItems: "center",
             textTransform: "none",
             borderRadius: Mq.sm ? "0.4rem" : "0.9rem",
-            border: "2px solid #6EB69D",
+            border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
             marginTop: Mq.sm ? "10px" : "30px",
             backgroundColor: isDark ? "#6EB69D" : "#035a69",
           }}

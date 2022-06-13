@@ -31,6 +31,7 @@ function App() {
             element={
               <>
                 <Header />
+        
                 <Landing />
                 <About />
                 <Experience />
