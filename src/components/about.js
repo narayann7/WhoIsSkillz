@@ -1,27 +1,26 @@
-import { useTheme } from "@mui/material";
 import React from "react";
 import common_styles from "../components/common_styles";
 import { useRootContext } from "./../context_api/root_context";
-const { BackgroundCard, CenterCard, Text } = common_styles;
+import { about_me } from "../utility/constants";
+const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function About() {
-  const theme = useTheme();
-  const { Mq, isDark } = useRootContext();
+  const { Mq } = useRootContext();
 
   return (
     <BackgroundCard id="about">
       <CenterCard
         style={{
           // backgroundColor: "grey",
-          width: Mq.sm ? "75vw" : "50vw",
+          width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
           display: "flex",
           marginLeft: Mq.sm ? "0px" : "50px",
+          marginBottom: Mq.sm ? "100px" : "0px",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
         <div
           style={{
-            // marginTop: Mq.sm?"10vh":"0vh",y
             display: "flex",
             flexDirection: "row",
             justifyContent: "start",
@@ -34,27 +33,20 @@ function About() {
               fontFamily: "Be Vietnam Pro",
               fontSize: Mq.sm ? "1.5rem" : "2.5rem",
               fontWeight: "600",
-              marginBottom:  "10px",
+              marginBottom: "10px",
             }}
           >
             about me.
           </Text>
         </div>
         <div>
-          <Text
+          <Text2
             style={{
-              fontSize: Mq.sm ? "1.2rem" :Mq.md ? "1.5rem" :  "1.7rem",
+              fontSize: Mq.sm ? "1rem" : Mq.md ? "1.1rem" : "1.3rem",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            dicta temporibus distinctio dolores. Consectetur tempore corrupti
-            nulla, reprehenderit id dolor. Explicabo iste inventore ratione ex
-            deleniti suscipit libero. Odio, magni.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            dicta temporibus distinctio dolores. Consectetur tempore corrupti
-            nulla, reprehenderit id dolor. Explicabo iste inventore ratione ex
-            deleniti suscipit libero. Odio, magni.
-          </Text>
+            {about_me}
+          </Text2>
         </div>
       </CenterCard>
     </BackgroundCard>

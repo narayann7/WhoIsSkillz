@@ -60,14 +60,14 @@ function Landing() {
             color: isDark ? "#6EB69D" : "#035a69",
           }}
         >
-          Laxmi Narayan
+          Narayan
         </Text>
         <div className="imWrapper">
           <div
             className="words"
             style={{
-              height: Mq.sm ? "2.2rem" : "3.5rem",
-              marginTop: Mq.sm ? "8px" : "0",
+              height: Mq.sm ? "2.2rem" : "3.3rem",
+              marginTop: Mq.sm ? "8px" : "10px",
               marginBottom: "5px",
               display: "flex",
               alignItems: Mq.sm ? "flex-start" : "center",
@@ -84,7 +84,7 @@ function Landing() {
                 <span id={index}>
                   <Text
                     style={{
-                      fontSize: Mq.sm ? "25px" : "40px",
+                      fontSize: Mq.sm ? "24px" : "35px",
                     }}
                   >
                     {item}
@@ -104,7 +104,7 @@ function Landing() {
               flexdirection: "row",
               marginTop: "15px",
               width: "40vw",
-              height: "5vh                           ",
+              height: "5vh",
             }}
           >
             <AllSocial isDark={isDark} />

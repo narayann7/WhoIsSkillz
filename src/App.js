@@ -26,7 +26,7 @@ function App() {
             <>
               <Header />
               <Landing />
-              {/* <About /> */}
+              <About />
               <Skills />
               <Experience />
               <Projects />
