@@ -52,7 +52,7 @@ function Skills() {
       marginTop: Mq.sm ? "0px" : "50px",
       width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
       display: "flex",
-      marginLeft: Mq.sm ? "0px" : "60px",
+      marginLeft: Mq.sm ? "50px" : "60px",
       justifyContent: "center",
       alignItems: "center",
     };

@@ -5,7 +5,7 @@ function Projects() {
   return (
     <BackgroundCard id="projects">
       <CenterCard>
-        <Text>Under development.</Text>
+        <Text>Under development 🏗️</Text>
       </CenterCard>
     </BackgroundCard>
   );

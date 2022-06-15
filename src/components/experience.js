@@ -5,7 +5,7 @@ function Experience() {
   return (
     <BackgroundCard id="experience">
       <CenterCard>
-      <Text>Under development.</Text>
+      <Text>Under development 🏗️</Text>
 
       </CenterCard>
     </BackgroundCard>

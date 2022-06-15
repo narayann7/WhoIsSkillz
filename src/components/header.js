@@ -11,45 +11,67 @@ import {
   github_link,
   gmail_link,
   twitter_link,
+  spotify_link,
   stackoverflow_link,
 } from "../utility/links";
 
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { Box } from "@mui/system";
+import { Avatar, Backdrop, Card, CardMedia } from "@mui/material";
+import images from "./../assets/base_assets";
 const { BackgroundCard, Text } = common_styles;
 
 function Header() {
   const { switchTheme, isDark, Mq } = useRootContext();
-  const headerArr = ["about", "experience", "projects"];
-  const headerHref = ["#about", "#experience", "#projects"];
+  const headerArr = ["landing", "about", "experience", "projects"];
+  const headerHref = ["#landing", "#about", "#experience", "#projects"];
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
   return (
     <>
+      {backDrop()}
       <BackgroundCard style={BackgroundCardStyle()}>
-        <Box sx={headerBoxStyle()}>
-          <a href="#landing">
+        <Box
+          sx={headerBoxStyle()}
+          onClick={() => {
+            if (Mq.sm) handleToggle();
+          }}
+        >
+          {!Mq.sm ? (
+            <a href="#landing">
+              <Text sx={lxStyle()}>Lx</Text>
+            </a>
+          ) : (
             <Text sx={lxStyle()}>Lx</Text>
-          </a>
+          )}
         </Box>
 
         <Box style={rowCenterSpaceevely()}>
           {!Mq.sm && (
             <Box style={rowCenterSpaceevely()}>
               {headerArr.map((header, index) => {
-                return (
-                  <a key={index} href={headerHref[index]}>
-                    <Text
-                      sx={{
-                        paddingRight: "2vw",
-                        "&:hover": {
-                          color: isDark ? "#6EB69D" : "#035a69",
-                          cursor: "pointer",
-                        },
-                      }}
-                    >
-                      {header}
-                    </Text>
-                  </a>
-                );
+                if (index !== 0) {
+                  return (
+                    <a key={index} href={headerHref[index]}>
+                      <Text
+                        sx={{
+                          paddingRight: "2vw",
+                          "&:hover": {
+                            color: isDark ? "#6EB69D" : "#035a69",
+                            cursor: "pointer",
+                          },
+                        }}
+                      >
+                        {header}
+                      </Text>
+                    </a>
+                  );
+                }
               })}
             </Box>
           )}
@@ -69,6 +91,61 @@ function Header() {
       )}
     </>
   );
+
+  function backDrop() {
+    return (
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+        onClick={handleClose}
+      >
+        <Card
+          style={{
+            height: "40vh",
+            width: "50vw",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: "15px",
+          }}
+        >
+          <LpLogo />
+          {headerArr.map((header, index) => {
+            return (
+              <a key={index} href={headerHref[index]}>
+                <Text
+                  sx={{
+                    fontFamily: "Be Vietnam Pro",
+                    fontSize: "22px",
+                    "&:hover": {
+                      color: isDark ? "#6EB69D" : "#035a69",
+                      cursor: "pointer",
+                    },
+                  }}
+                >
+                  {header}
+                </Text>
+              </a>
+            );
+          })}
+          <div style={dot()}></div>
+        </Card>
+      </Backdrop>
+    );
+  }
+
+  function dot() {
+    return {
+      height: "1vh",
+      width: "1vh",
+      backgroundColor: isDark ? "#6EB69D" : "#035a69",
+      borderRadius: "50%",
+      marginBottom: "15px",
+      marginTop: "15px",
+      marginLeft: "10px",
+    };
+  }
 
   function rowCenterSpaceevely() {
     return {
@@ -265,5 +342,38 @@ export const AllSocial = ({ isDark }) => {
         </a>
       </span>
     </>
+  );
+};
+const LpLogo = () => {
+  return (
+    <div
+      onClick={() => {
+        window.open(spotify_link, "_blank");
+      }}
+      style={{
+        // marginLeft: "10vw",
+        marginBottom: "2vh",
+        marginTop: "4vh",
+        borderRadius: "50%",
+      }}
+    >
+      <Avatar
+        style={{
+          height: "50px",
+          width: "50px",
+          backgroundColor: "black",
+        }}
+        className="add_friend"
+      >
+        <CardMedia
+          style={{
+            height: "60px",
+            width: "60px",
+          }}
+          component="img"
+          image={images.lp_logo}
+        />
+      </Avatar>
+    </div>
   );
 };
