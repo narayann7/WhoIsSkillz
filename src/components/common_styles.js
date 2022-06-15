@@ -40,11 +40,16 @@ const Text = styled(Typography)(({ theme }) => ({
   fontFamily: "Sen",
   color: theme.palette.text.primary,
 }));
+const Text2 = styled(Typography)(({ theme }) => ({
+  fontFamily: "Sen",
+  color: theme.palette.text.secondary,
+}));
 
 const common_styles = {
   BackgroundCard,
   CenterCard,
   Text,
+  Text2,
   CenterCardLanding,
 };
 

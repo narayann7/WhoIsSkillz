@@ -20,8 +20,8 @@ const { BackgroundCard, Text } = common_styles;
 
 function Header() {
   const { switchTheme, isDark, Mq } = useRootContext();
-  const headerArr = ["about", "experience", "projects"];
-  const headerHref = ["#about", "#experience", "#projects"];
+  const headerArr = ["about","skills" ,"experience", "projects"];
+  const headerHref = ["#about","#skills", "#experience", "#projects"];
   return (
     <>
       <BackgroundCard style={BackgroundCardStyle()}>

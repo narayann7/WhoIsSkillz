@@ -10,6 +10,7 @@ import { useRootContext } from "./context_api/root_context";
 import Header from "./components/header.js";
 import Experience from "./components/experience.js";
 import Projects from "./components/projects";
+import Skills from "./components/skills.js";
 
 function App() {
   const { isDark } = useRootContext();
@@ -25,7 +26,8 @@ function App() {
             <>
               <Header />
               <Landing />
-              <About />
+              {/* <About /> */}
+              <Skills />
               <Experience />
               <Projects />
             </>
