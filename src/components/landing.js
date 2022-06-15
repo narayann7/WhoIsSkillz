@@ -18,7 +18,7 @@ const iam = [
 ];
 function Landing() {
   const { isDark, Mq } = useRootContext();
-  const headerHref = ["#landing", "#about","#skills", "#experience", "#projects"];
+  const headerHref = ["#landing", "#about", "#experience", "#projects"];
 
   const [currentIndex, setcurrentIndex] = useState(0);
 
@@ -49,7 +49,7 @@ function Landing() {
                 }
           }
         >
-          {`Hello ${isDark ? "👋🏻" : "👋🏿"}, I’m`}
+          {`Hello ${isDark ? "👋🏻" : "👋🏿"}, It's`}
         </Text>
         <Text
           style={{
@@ -169,7 +169,7 @@ function ResumeButton(Mq, isDark) {
         justifyContent: "center",
         alignItems: "center",
         textTransform: "none",
-        borderRadius: Mq.sm ? "0.4rem" : "0.9rem",
+        borderRadius: Mq.sm ? "0.4rem" : "0.8rem",
         border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
         marginTop: Mq.sm ? "10px" : "30px",
         backgroundColor: isDark ? "#6EB69D" : "#035a69",

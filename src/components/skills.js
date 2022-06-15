@@ -11,35 +11,9 @@ function Skills() {
 
   return (
     <BackgroundCard id="skills">
-      <CenterCard
-        style={{
-          marginTop: Mq.sm ? "0px" : "50px",
-          width: Mq.sm ? "75vw" :Mq.md ? "65vw" : "50vw",
-          display: "flex",
-          marginLeft: Mq.sm ? "0px" : "60px",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "start",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "1rem" : "2rem",
-              fontWeight: "600",
-              marginBottom: "20px",
-            }}
-          >
-            Tech stack.
-          </Text>
+      <CenterCard style={CenterCardStyle()}>
+        <div style={skillsContentStyle()}>
+          <Text style={techStackStyle()}>Tech stack.</Text>
         </div>
         <TechType name={"Languages"} techArr={tech_stack.languages} />
         <TechType
@@ -53,6 +27,36 @@ function Skills() {
       </CenterCard>
     </BackgroundCard>
   );
+
+  function techStackStyle() {
+    return {
+      fontFamily: "Be Vietnam Pro",
+      fontSize: Mq.sm ? "1rem" : "2rem",
+      fontWeight: "600",
+      marginBottom: "20px",
+    };
+  }
+
+  function skillsContentStyle() {
+    return {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "start",
+      alignItems: "center",
+      width: "100%",
+    };
+  }
+
+  function CenterCardStyle() {
+    return {
+      marginTop: Mq.sm ? "0px" : "50px",
+      width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
+      display: "flex",
+      marginLeft: Mq.sm ? "0px" : "60px",
+      justifyContent: "center",
+      alignItems: "center",
+    };
+  }
 
   function TechType({ name, techArr }) {
     return (

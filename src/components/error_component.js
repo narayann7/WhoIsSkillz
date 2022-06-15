@@ -1,19 +1,31 @@
 import { Link } from "react-router-dom";
+import { Card } from "@mui/material";
+import common_styles from "./common_styles";
+
+const { Text } = common_styles;
 
 function Error() {
   return (
-    <div
+    <Card
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+
+        borderRadius: "0px",
         height: "100vh",
       }}
     >
-      <h2>404 Page Not Found ☹️</h2>
+      <Text
+        style={{
+          fontSize: "2rem",
+        }}
+      >
+        404 Page Not Found ☹️
+      </Text>
       <Link to={"/who-is-skillz"}>go back</Link>
-    </div>
+    </Card>
   );
 }
 export default Error;

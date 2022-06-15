@@ -8,36 +8,9 @@ function About() {
 
   return (
     <BackgroundCard id="about">
-      <CenterCard
-        style={{
-          // backgroundColor: "grey",
-          width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
-          display: "flex",
-          marginLeft: Mq.sm ? "0px" : "50px",
-          marginBottom: Mq.sm ? "100px" : "0px",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "start",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "1.5rem" : "2.5rem",
-              fontWeight: "600",
-              marginBottom: "10px",
-            }}
-          >
-            about me.
-          </Text>
+      <CenterCard style={CenterCardStyle()}>
+        <div style={aboutContentStyle()}>
+          <Text style={aboutMeStyle()}>About me.</Text>
         </div>
         <div>
           <Text2
@@ -51,15 +24,36 @@ function About() {
       </CenterCard>
     </BackgroundCard>
   );
+
+  function aboutMeStyle() {
+    return {
+      fontFamily: "Be Vietnam Pro",
+      fontSize: Mq.sm ? "1.5rem" : "2.5rem",
+      fontWeight: "600",
+      marginBottom: "10px",
+    };
+  }
+
+  function aboutContentStyle() {
+    return {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "start",
+      alignItems: "center",
+      width: "100%",
+    };
+  }
+
+  function CenterCardStyle() {
+    return {
+      width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
+      display: "flex",
+      marginLeft: Mq.sm ? "0px" : "50px",
+      marginBottom: Mq.sm ? "100px" : "0px",
+      justifyContent: "center",
+      alignItems: "center",
+    };
+  }
 }
 
 export default About;
-{
-  /* <Text
->
-  " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-  quasi. Veritatis cumque quaerat cupiditate est non! Magni modi quam ex
-  placeat quas, voluptatem, tempore exercitationem expedita blanditiis
-  sapiente consectetur ab. "
-</Text> */
-}

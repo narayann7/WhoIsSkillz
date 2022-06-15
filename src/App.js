@@ -1,7 +1,6 @@
 import { React, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
-import Root from "./components/root.js";
 import Landing from "./components/landing";
 import About from "./components/about";
 import { ThemeProvider } from "@emotion/react";
@@ -37,22 +36,6 @@ function App() {
         <Route path="/*" element={<Error></Error>}></Route>
       </Routes>
     </ThemeProvider>
-
-    // <div class="main_div">
-    //   <Header />
-    //   <Home />
-
-    //   {/* <About />
-    //   <Experience />
-    //   <Projects />
-
-    //   <Contact />
-    //   <Footer />
-    //   <Experience />
-    //   <Projects />
-    //   <Contact />
-    //   <Footer /> */}
-    // </div>
   );
 }
 
