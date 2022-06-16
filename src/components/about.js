@@ -1,7 +1,7 @@
 import React from "react";
 import common_styles from "../components/common_styles";
 import { useRootContext } from "./../context_api/root_context";
-import { about_me } from "../utility/constants";
+import { about_me } from "../utility/constants_data";
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function About() {
   const { Mq } = useRootContext();

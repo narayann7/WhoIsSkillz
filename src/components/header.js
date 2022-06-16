@@ -95,12 +95,15 @@ function Header() {
   function backDrop() {
     return (
       <Backdrop
-        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ 
+          
+          color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
         onClick={handleClose}
       >
         <Card
           style={{
+      
             height: "40vh",
             width: "50vw",
             display: "flex",

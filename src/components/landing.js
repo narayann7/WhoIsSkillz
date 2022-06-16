@@ -53,7 +53,8 @@ function Landing() {
         </Text>
         <Text
           style={{
-            fontSize: Mq.sm ? "2rem" : Mq.bsm ? "6vh" : "10vh",
+            fontFamily: "Be Vietnam Pro",
+            fontSize: Mq.sm ? "2.5rem" : Mq.bsm ? "10vh" : "13vh",
             fontWeight: "700",
             lineHeight: "0.9",
             marginTop: Mq.sm ? "10px" : "0",
@@ -67,7 +68,7 @@ function Landing() {
             className="words"
             style={{
               height: Mq.sm ? "2.2rem" : "3.3rem",
-              marginTop: Mq.sm ? "8px" : "10px",
+              marginTop: Mq.sm ? "8px" : "18px",
               marginBottom: "5px",
               display: "flex",
               alignItems: Mq.sm ? "flex-start" : "center",

@@ -3,7 +3,7 @@ import React from "react";
 import common_styles from "../components/common_styles";
 import { useRootContext } from "../context_api/root_context";
 import { Box } from "@mui/system";
-import { tech_stack } from "../utility/constants";
+import { tech_stack } from "../utility/constants_data";
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 
 function Skills() {
@@ -31,7 +31,7 @@ function Skills() {
   function techStackStyle() {
     return {
       fontFamily: "Be Vietnam Pro",
-      fontSize: Mq.sm ? "1rem" : "2rem",
+      fontSize: Mq.sm ? "1.5rem" : "2.5rem",
       fontWeight: "600",
       marginBottom: "20px",
     };
