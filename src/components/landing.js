@@ -41,7 +41,7 @@ function Landing() {
           style={
             Mq.sm
               ? {
-                  fontSize: "0.8rem",
+                  fontSize: "1rem",
                   paddingLeft: "2px",
                 }
               : {

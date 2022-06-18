@@ -31,7 +31,8 @@ function Skills() {
   function techStackStyle() {
     return {
       fontFamily: "Be Vietnam Pro",
-      fontSize: Mq.sm ? "1.5rem" : "2.5rem",
+      fontSize: Mq.sm ? "1.5rem" : Mq.md ? "25px" : "35px",
+
       fontWeight: "600",
       marginBottom: "20px",
     };

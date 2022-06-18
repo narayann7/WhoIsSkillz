@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -19,12 +19,14 @@ import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { Box } from "@mui/system";
 import { Avatar, Backdrop, Card, CardMedia } from "@mui/material";
 import images from "./../assets/base_assets";
-const { BackgroundCard, Text } = common_styles;
+const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
   const { switchTheme, isDark, Mq } = useRootContext();
   const headerArr = ["landing", "about", "experience", "projects"];
   const headerHref = ["#landing", "#about", "#experience", "#projects"];
+  const [currentIndex, setcurrentIndex] = useState(0);
+
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -95,15 +97,16 @@ function Header() {
   function backDrop() {
     return (
       <Backdrop
-        sx={{ 
-          
-          color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          backdropFilter: "blur(6px)",
+
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+        }}
         open={open}
         onClick={handleClose}
       >
-        <Card
+        <div
           style={{
-      
             height: "40vh",
             width: "50vw",
             display: "flex",
@@ -111,38 +114,91 @@ function Header() {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "15px",
+
+            backgroundColor: " rgba(0, 0, 0, 0)",
           }}
         >
           <LpLogo />
-          {headerArr.map((header, index) => {
+          {/* {headerArr.map((header, index) => {
             return (
               <a key={index} href={headerHref[index]}>
-                <Text
-                  sx={{
-                    fontFamily: "Be Vietnam Pro",
-                    fontSize: "22px",
-                    "&:hover": {
-                      color: isDark ? "#6EB69D" : "#035a69",
-                      cursor: "pointer",
-                    },
-                  }}
-                >
-                  {header}
-                </Text>
+               
               </a>
             );
-          })}
+          })} */}
+          {headerMobileButton()}
           <div style={dot()}></div>
-        </Card>
+        </div>
       </Backdrop>
     );
   }
-
+  function headerMobileButton() {
+    return headerArr.map((item, index) => {
+      if (index === currentIndex) {
+        return (
+          <a key={index} href={headerHref[index]}>
+            <Card
+              onClick={() => setcurrentIndex(index)}
+              style={{
+                width: "200px",
+                height: "43px",
+                display: "flex",
+                cursor: "pointer",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
+              }}
+            >
+              <Text>{item}</Text>
+            </Card>
+          </a>
+        );
+      } else {
+        return (
+          <a key={index} href={headerHref[index]}>
+            <Box
+              onClick={() => setcurrentIndex(index)}
+              key={index}
+              sx={{
+                "&:hover": {
+                  backgroundColor: isDark ? "#102027" : "#9ebfb4",
+                  transition: "background-color 0.5s ease;",
+                  cursor: "pointer",
+                  borderRadius: "4px",
+                  marginTop: "4px",
+                  marginBottom: "4px",
+                  border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
+                },
+              }}
+              style={{
+                width: "200px",
+                height: "43px",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "white",
+              }}
+            >
+              <Text2
+                style={{
+                  color: isDark ? "grey" : "white",
+                }}
+              >
+                {item}
+              </Text2>
+            </Box>
+          </a>
+        );
+      }
+    });
+  }
   function dot() {
     return {
       height: "1vh",
       width: "1vh",
-      backgroundColor: isDark ? "#6EB69D" : "#035a69",
+      backgroundColor: "#6EB69D",
       borderRadius: "50%",
       marginBottom: "15px",
       marginTop: "15px",

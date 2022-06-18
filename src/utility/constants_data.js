@@ -88,13 +88,25 @@ export const work_experience_one = {
   date: "9 Dec(2021) - 12 Jan(2022)",
   job_title: "Flutter Developer",
   points: [
-    "contributed v2 of StockDaddy app from scratch, in which I was responsible for architecture and Business Logic and followed MVC architecture",
-    "designed the Authentication and Authorization flow for the app login, signup, otp by using RiverPod as state-management ",
-    "intergrated 15+ GraphQL APIs by following best-practices which includes Authentication,Payment integration using RazorPay, and other business logic",
+    "Contributed v2 of StockDaddy app from scratch, in which I was responsible for architecture and Business Logic and followed MVC architecture",
+    "Designed the Authentication and Authorization flow for the app login, signup, OTP by using RiverPod as state-management",
+    "Integrated 15+ GraphQL APIs by following best practices which include Authentication, Payment integration using Razor Pay, and other business logic.",
   ],
   extra: {
-    data1: "app has 50K+ downloads",
+    data1: "has 50K+ downloads",
     appLink:
       "https://play.google.com/store/apps/details?id=com.easemytrades.stockdaddy",
   },
+};
+
+export const work_experience_two = {
+  company_name: "Velozity",
+  company_link: "https://velozityglobal.com/",
+  date: "25 Feb(2022) - current",
+  job_title: "Flutter Developer",
+  points: [
+    "Actively contributing to Customer, Restaurant, and Delivery apps which are  part of a Food delivery service, In which I am responsible for developing UI, Business Logic with proper state-management using BLOC and MVC architecture",
+    "Designed the Authentication and Authorization flow for Restaurant and Delivery the app login, register, and OTP by using RiverPod as state-management and restful APIs    ",
+    "Integrated 20+ Restful APIs, creating orders, Oder tracking using Google Maps API, Payment integration using Razor Pay, Signing APK and other business logic for all three apps.",
+  ],
 };
