@@ -54,7 +54,7 @@ function Landing() {
         <Text
           style={{
             fontFamily: "Be Vietnam Pro",
-            fontSize: Mq.sm ? "2.5rem" : Mq.bsm ? "10vh" : "13vh",
+            fontSize: Mq.sm ? "2.5rem" : Mq.bsm ? "10vh" : "11vh",
             fontWeight: "700",
             lineHeight: "0.9",
             marginTop: Mq.sm ? "10px" : "0",
