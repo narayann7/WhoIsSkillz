@@ -25,6 +25,7 @@ function Landing() {
   return (
     <BackgroundCard id="landing">
       <CenterCardLanding
+        className="slide_down"
         style={
           Mq.sm
             ? {

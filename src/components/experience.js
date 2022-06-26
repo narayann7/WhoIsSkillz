@@ -11,7 +11,7 @@ import {
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Experience() {
   const { isDark, Mq } = useRootContext();
-  const companyArr = ["Embrays tech.", "Velozity"];
+  const companyArr = ["Velozity", "Embrays tech."];
   const workArr = [work_experience_one, work_experience_two];
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
@@ -37,7 +37,6 @@ function Experience() {
               display: "flex",
               flexDirection: "row",
               justifyContent: "start",
-              // justifyContent: Mq.md ? "center" : "start",
               width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
               alignItems: "center",
             }}
@@ -109,7 +108,7 @@ function Experience() {
             backgroundColor: " rgba(0, 0, 0, 0)",
           }}
         >
-          {" "}
+         
           {expLeft()}
         </div>
       </Backdrop>
@@ -188,7 +187,7 @@ function Experience() {
                 cursor: "pointer",
               }}
             >
-              {"PlayStore Link "}
+              {"PlayStoreLink "}
             </Text>
           </Box>
         )}

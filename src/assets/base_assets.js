@@ -15,9 +15,14 @@ import git_icon from "./icons/git.png";
 import flutter_icon from "./icons/flutter.png";
 import figma_icon from "./icons/figma.png";
 import react_icon from "./icons/react.png";
-
+import pro1 from "./images/pro1.png";
+import pro2 from "./images/pro2.png";
+import pro3 from "./images/pro3.png";
 
 const images = {
+  pro1,
+  pro2,
+  pro3,
   lp_logo,
   github_icon,
   c_icon,

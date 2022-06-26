@@ -9,7 +9,7 @@ const RootProvider = (props) => {
     esm: useMediaQuery("(min-width:400px)"),
     sm: useMediaQuery("(max-width:600px)"),
     bsm: useMediaQuery("(max-width:730px)"),
-    md: useMediaQuery("(max-width:900px)"),
+    md: useMediaQuery("(max-width:1000px)"),
     lg: useMediaQuery("(min-width:900px)"),
   };
   const switchTheme = () => {
