@@ -108,7 +108,6 @@ function Experience() {
             backgroundColor: " rgba(0, 0, 0, 0)",
           }}
         >
-         
           {expLeft()}
         </div>
       </Backdrop>

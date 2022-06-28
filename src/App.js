@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Landing from "./components/landing";
 import About from "./components/about";
+import Footer from "./components/footer";
 import { ThemeProvider } from "@emotion/react";
 import themes from "./utility/themes";
 import { useRootContext } from "./context_api/root_context";
@@ -29,6 +30,7 @@ function App() {
               <Skills />
               <Experience />
               <Projects />
+              <Footer />
             </>
           }
         />

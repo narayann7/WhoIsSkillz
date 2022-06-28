@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { VscTriangleDown } from "react-icons/vsc";
-import common_styles from "../components/common_styles";
 import { useRootContext } from "../context_api/root_context";
 
 import {
@@ -17,6 +16,8 @@ import {
   projects_two,
   projects_three,
 } from "../utility/constants_data";
+import common_styles from "../components/common_styles";
+
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Projects() {
   const projects_list = [projects_one, projects_two, projects_three];
@@ -187,62 +188,68 @@ function Projects() {
 export default Projects;
 function ProjectDetails({ project, Mq }) {
   return (
-    <Box
+    <Card
       style={{
-        width: Mq.sm ? "300px" : Mq.md ? "500px" : "30vw",
-        display: "flex",
-        marginTop: Mq.sm ? "0px" : Mq.md ? "50px" : "0px",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
+        padding: "15px",
       }}
     >
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="160"
-        image={project.picture}
-      />
-
       <Box
         style={{
+          width: Mq.sm ? "280px" : Mq.md ? "500px" : "30vw",
           display: "flex",
-          justifyContent: "space-between",
+          marginTop: Mq.sm ? "0px" : Mq.md ? "50px" : "0px",
+          justifyContent: "center",
           alignItems: "center",
-          width: Mq.sm ? "300px" : Mq.md ? "500px" : "30vw",
-
-          flexDirection: "row",
+          flexDirection: "column",
         }}
       >
-        <Text
-          sx={{
-            fontSize: "20px",
+        <CardMedia
+          component="img"
+          alt="image"
+          height="160"
+          image={project.picture}
+        />
+
+        <Box
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: Mq.sm ? "280px" : Mq.md ? "500px" : "30vw",
+
+            flexDirection: "row",
           }}
         >
-          {project.name}
-        </Text>
-        <Box>
-          <CardActions>
-            <Button
-              onClick={() => {
-                window.open(project.link, "_blank");
-              }}
-              size="small"
-            >
-              Github
-            </Button>
-            <Button
-              onClick={() => {
-                window.open(project.preview, "_blank");
-              }}
-              size="small"
-            >
-              preview
-            </Button>
-          </CardActions>
+          <Text
+            sx={{
+              fontSize: "20px",
+            }}
+          >
+            {project.name}
+          </Text>
+          <Box>
+            <CardActions>
+              <Button
+                onClick={() => {
+                  window.open(project.link, "_blank");
+                }}
+                size="small"
+              >
+                Github
+              </Button>
+              <Button
+                onClick={() => {
+                  window.open(project.preview, "_blank");
+                }}
+                size="small"
+              >
+                preview
+              </Button>
+            </CardActions>
+          </Box>
         </Box>
+        <Text2>{project.description}</Text2>
       </Box>
-      <Text2>{project.description}</Text2>
-    </Box>
+    </Card>
   );
 }
