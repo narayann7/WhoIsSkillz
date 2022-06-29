@@ -128,3 +128,27 @@ body {
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
+
+
+.container {
+  width: 100%;
+}
+.eye {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+}
+.eye:after {
+  /*pupil*/
+  position: absolute;
+  bottom: 17px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 50%;
+  content: " ";
+}

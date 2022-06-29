@@ -3,6 +3,9 @@ const resume_link =
 const linkedin_link = "https://www.linkedin.com/in/narayann/";
 const github_link = "https://github.com/narayann7";
 const gmail_link = "mailto:laxminarayanreddy432@gmail.com";
+const whatsapp_link = "https://wa.me/+918249903317";
+const telegram_link = "https://t.me/skillz6";
+const leetcode_link = "https://leetcode.com/narayann7/";
 const twitter_link = "https://twitter.com/narayann_";
 const instagram_link = "https://www.instagram.com/_narayann/";
 const stackoverflow_link = "https://stackoverflow.com/users/14385914/narayann";
@@ -13,8 +16,11 @@ module.exports = {
   linkedin_link: linkedin_link,
   github_link: github_link,
   gmail_link: gmail_link,
+  whatsapp_link: whatsapp_link,
   twitter_link: twitter_link,
   instagram_link: instagram_link,
   spotify_link: spotify_link,
   stackoverflow_link: stackoverflow_link,
+  telegram_link: telegram_link,
+  leetcode_link: leetcode_link,
 };

@@ -18,7 +18,13 @@ const iam = [
 ];
 function Landing() {
   const { isDark, Mq } = useRootContext();
-  const headerHref = ["#landing", "#about", "#experience", "#projects"];
+  const headerHref = [
+    "#landing",
+    "#about",
+    "#experience",
+    "#projects",
+    "#connect",
+  ];
 
   const [currentIndex, setcurrentIndex] = useState(0);
 

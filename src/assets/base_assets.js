@@ -18,8 +18,10 @@ import react_icon from "./icons/react.png";
 import pro1 from "./images/pro1.png";
 import pro2 from "./images/pro2.png";
 import pro3 from "./images/pro3.png";
+import handshake from "./handshake.gif";
 
 const images = {
+  handshake,
   pro1,
   pro2,
   pro3,

@@ -23,8 +23,8 @@ const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
   const { switchTheme, isDark, Mq } = useRootContext();
-  const headerArr = ["landing", "about", "experience", "projects"];
-  const headerHref = ["#landing", "#about", "#experience", "#projects"];
+  const headerArr = ["landing", "about", "experience", "projects","connect"];
+  const headerHref = ["#landing", "#about", "#experience", "#projects","#connect"];
   const [currentIndex, setcurrentIndex] = useState(0);
 
   const [open, setOpen] = React.useState(false);
@@ -107,7 +107,7 @@ function Header() {
       >
         <div
           style={{
-            height: "40vh",
+            height: "50vh",
             width: "50vw",
             display: "flex",
             flexDirection: "column",
@@ -119,13 +119,7 @@ function Header() {
           }}
         >
           <LpLogo />
-          {/* {headerArr.map((header, index) => {
-            return (
-              <a key={index} href={headerHref[index]}>
-               
-              </a>
-            );
-          })} */}
+       
           {headerMobileButton()}
           <div style={dot()}></div>
         </div>
@@ -271,7 +265,7 @@ function Header() {
 }
 
 export default Header;
-const SideSocial = ({ isDark }) => {
+export const SideSocial = ({ isDark }) => {
   return (
     <div
       style={{
@@ -298,6 +292,7 @@ const SideSocial = ({ isDark }) => {
     </div>
   );
 };
+
 
 export const AllSocial = ({ isDark }) => {
   return (
