@@ -83,7 +83,7 @@ function Connect() {
           </Text>
         </Box>
 
-        <div
+        {/* <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -130,7 +130,7 @@ function Connect() {
           </Box>
 
           <Text2>if like it 👀</Text2>
-        </div>
+        </div> */}
         {Mq.md && (
           <div
             style={{
