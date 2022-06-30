@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import common_styles from "../components/common_styles";
 import images from "../assets/base_assets";
 import { AllSocial } from "./header";
-
 import { RiTelegramFill } from "react-icons/ri";
 import { TbBrandWhatsapp } from "react-icons/tb";
 import { RiSpotifyFill } from "react-icons/ri";
@@ -36,7 +35,7 @@ function Connect() {
         <Text
           style={{
             fontFamily: "Be Vietnam Pro",
-            fontSize: Mq.sm ? "55px" : "90px",
+            fontSize: Mq.sm ? "55px" : Mq.md ? "60px" : "90px",
             margin: "0px",
             letterSpacing: "-1px",
             fontWeight: "900",
@@ -56,7 +55,7 @@ function Connect() {
           <Text
             style={{
               fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "30px" : "50px",
+              fontSize: Mq.sm ? "30px" : Mq.md ? "35px" : "50px",
             }}
           >
             with
@@ -77,52 +76,71 @@ function Connect() {
           <Text
             style={{
               fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "30px" : "50px",
+              fontSize: Mq.sm ? "30px" : Mq.md ? "35px" : "50px",
             }}
           >
             me
           </Text>
         </Box>
 
-        <Box
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             marginTop: "10px",
-            marginBottom: "20px",
 
-            flexDirection: "row",
+            flexDirection: Mq.sm ? "column" : "row",
           }}
         >
-          <Text2
+          <Box
             style={{
-              lineHeight: "1px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: Mq.sm ? "20px" : "0px",
+
+              flexDirection: "row",
             }}
           >
-            give it a star ⭐ in
-          </Text2>
-          <Text
-            onClick={() => {
-              window.open(
-                "https://github.com/narayann7/who-is-skillz",
-                "_blank"
-              );
-            }}
+            <Text2
+              style={{
+                lineHeight: "1px",
+              }}
+            >
+              give it a st⭐r in
+            </Text2>
+            <Text
+              onClick={() => {
+                window.open(
+                  "https://github.com/narayann7/who-is-skillz",
+                  "_blank"
+                );
+              }}
+              style={{
+                cursor: "pointer",
+                marginLeft: "5px",
+                marginRight: "5px",
+                color: isDark ? "#6EB69D" : "#035a69",
+                lineHeight: "1px",
+              }}
+            >
+              Github
+            </Text>
+          </Box>
+
+          <Text2>if like it 👀</Text2>
+        </div>
+        {Mq.md && (
+          <div
             style={{
-              cursor: "pointer",
-              marginLeft: "5px",
-              marginRight: "5px",
-              color: isDark ? "#6EB69D" : "#035a69",
-              lineHeight: "1px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "90px",
+              flexDirection: "column",
             }}
           >
-            Github
-          </Text>
-        </Box>
-        <Text2>if like it 👀</Text2>
-        {Mq.sm && (
-          <div>
             <div
               style={{
                 display: "flex",
@@ -130,8 +148,8 @@ function Connect() {
                 alignItems: "end",
                 flexdirection: "row",
                 marginTop: "15px",
-                width: "40vw",
-                height: "5vh",
+                width: Mq.sm ? "40vw" : "20vw",
+                height: "4vh",
               }}
             >
               <AllSocial isDark={isDark} />
@@ -142,9 +160,8 @@ function Connect() {
                 justifyContent: "space-between",
                 alignItems: "end",
                 flexdirection: "row",
-                marginTop: "15px",
-                width: "40vw",
-                height: "5vh",
+                width: Mq.sm ? "40vw" : "20vw",
+                height: "4vh",
               }}
             >
               <AllSocial2 isDark={isDark} />
@@ -158,7 +175,7 @@ function Connect() {
             paddingBottom: "8px",
           }}
         >
-          Built with 💜 by Narayan
+          Built with ♥️ by Narayan
         </Text>
       </CenterCard>
       {!Mq.md && <SideSocial isDark={isDark} />}

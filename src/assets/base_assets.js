@@ -19,8 +19,10 @@ import pro1 from "./images/pro1.png";
 import pro2 from "./images/pro2.png";
 import pro3 from "./images/pro3.png";
 import handshake from "./handshake.gif";
+import error_404 from "./images/404.png";
 
 const images = {
+  error_404,
   handshake,
   pro1,
   pro2,

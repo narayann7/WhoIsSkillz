@@ -9,9 +9,15 @@ const leetcode_link = "https://leetcode.com/narayann7/";
 const twitter_link = "https://twitter.com/narayann_";
 const instagram_link = "https://www.instagram.com/_narayann/";
 const stackoverflow_link = "https://stackoverflow.com/users/14385914/narayann";
+const spotify_end_playlist_link =
+  "https://open.spotify.com/playlist/3j0M3SnpY12o5NbG7wNrts?si=jU3HSrMoQGOMC4DyA995Qw&utm_source=copy-link";
+const spotify_143_playlist_link =
+  "https://open.spotify.com/playlist/5TlrzMjy9d7Lke11BF2nfZ?si=J-3pD6mvT02D188lwQnRjQ&utm_source=copy-link";
 const spotify_link =
   "https://open.spotify.com/user/jkqb4becefsfolv4ynnd7hrrq?si=mGdUR3UCS2emOlu0Y9v_3A&utm_source=copy-link";
 module.exports = {
+  spotify_143_playlist_link: spotify_143_playlist_link,
+  spotify_end_playlist_link: spotify_end_playlist_link,
   resume_link: resume_link,
   linkedin_link: linkedin_link,
   github_link: github_link,

@@ -11,8 +11,8 @@ import {
   github_link,
   gmail_link,
   twitter_link,
-  spotify_link,
   stackoverflow_link,
+  spotify_end_playlist_link,
 } from "../utility/links";
 
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
@@ -23,8 +23,14 @@ const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
   const { switchTheme, isDark, Mq } = useRootContext();
-  const headerArr = ["landing", "about", "experience", "projects","connect"];
-  const headerHref = ["#landing", "#about", "#experience", "#projects","#connect"];
+  const headerArr = ["landing", "about", "experience", "projects", "connect"];
+  const headerHref = [
+    "#landing",
+    "#about",
+    "#experience",
+    "#projects",
+    "#connect",
+  ];
   const [currentIndex, setcurrentIndex] = useState(0);
 
   const [open, setOpen] = React.useState(false);
@@ -84,6 +90,7 @@ function Header() {
               <HiOutlineMoon size={20} color="black" />
             )}
           </Box>
+          <div></div>
         </Box>
       </BackgroundCard>
       {!Mq.md && (
@@ -119,7 +126,7 @@ function Header() {
           }}
         >
           <LpLogo />
-       
+
           {headerMobileButton()}
           <div style={dot()}></div>
         </div>
@@ -244,6 +251,7 @@ function Header() {
       backgroundColor: isDark ? "#102027" : "#9ebfb4",
       height: "40px",
       width: "40px",
+      marginRight: "10px",
       borderRadius: "12px",
     };
   }
@@ -292,7 +300,6 @@ export const SideSocial = ({ isDark }) => {
     </div>
   );
 };
-
 
 export const AllSocial = ({ isDark }) => {
   return (
@@ -402,7 +409,7 @@ const LpLogo = () => {
   return (
     <div
       onClick={() => {
-        window.open(spotify_link, "_blank");
+        window.open(spotify_end_playlist_link, "_blank");
       }}
       style={{
         // marginLeft: "10vw",

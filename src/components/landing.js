@@ -3,10 +3,11 @@ import { Box, Button } from "@mui/material";
 import { resume_link } from "../utility/links";
 import { useRootContext } from "../context_api/root_context";
 import { HiExternalLink } from "react-icons/hi";
+import { TbPlaylist } from "react-icons/tb";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import common_styles from "../components/common_styles";
 import { AllSocial } from "./header";
-
+import { spotify_143_playlist_link } from "../utility/links";
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
 const iam = [
@@ -132,11 +133,12 @@ function floatingAction(headerHref, currentIndex, setcurrentIndex, isDark) {
     <a href={headerHref[currentIndex]}>
       <Box
         onClick={() => {
-          if (currentIndex < headerHref.length - 1) {
-            setcurrentIndex(currentIndex + 1);
-          } else {
-            setcurrentIndex(0);
-          }
+          window.open(spotify_143_playlist_link, "_blank");
+          // if (currentIndex < headerHref.length - 1) {
+          //   setcurrentIndex(currentIndex + 1);
+          // } else {
+          //   setcurrentIndex(0);
+          // }
         }}
         sx={{
           right: "35px",
@@ -152,11 +154,13 @@ function floatingAction(headerHref, currentIndex, setcurrentIndex, isDark) {
           borderRadius: "12px",
         }}
       >
-        {currentIndex === headerHref.length - 1 ? (
+        <TbPlaylist size={20} color={isDark ? "white" : "black"} />
+        {/* {currentIndex === headerHref.length - 1 ? (
           <FaAngleDoubleUp color={isDark ? "white" : "black"} />
-        ) : (
+        ) 
+        : (
           <FaAngleDoubleDown color={isDark ? "white" : "black"} />
-        )}
+        )} */}
       </Box>
     </a>
   );
