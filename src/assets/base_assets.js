@@ -1,5 +1,5 @@
 import lp_logo from "./images/lp_logo.png";
-import github_icon from "./icons/github.png";
+import github_icon from "./icons/gitHub.png";
 import c_icon from "./icons/c++.png";
 import autohotkey_icon from "./icons/autohotkey.png";
 import mongo_icon from "./icons/mongo.png";
