@@ -11,6 +11,7 @@ import {
   github_link,
   gmail_link,
   twitter_link,
+  spotify_143_playlist_link,
   stackoverflow_link,
   spotify_end_playlist_link,
 } from "../utility/links";
@@ -48,15 +49,18 @@ function Header() {
           sx={headerBoxStyle()}
           onClick={() => {
             if (Mq.sm) handleToggle();
+            else window.open(spotify_143_playlist_link, "_blank");
           }}
         >
-          {!Mq.sm ? (
+          <Text sx={lxStyle()}>Lx</Text>
+
+          {/* {!Mq.sm ? (
             <a href="#landing">
               <Text sx={lxStyle()}>Lx</Text>
             </a>
           ) : (
             <Text sx={lxStyle()}>Lx</Text>
-          )}
+          )} */}
         </Box>
 
         <Box style={rowCenterSpaceevely()}>
