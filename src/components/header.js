@@ -11,7 +11,6 @@ import {
   github_link,
   gmail_link,
   twitter_link,
-  spotify_143_playlist_link,
   stackoverflow_link,
   spotify_end_playlist_link,
 } from "../utility/links";
@@ -49,18 +48,15 @@ function Header() {
           sx={headerBoxStyle()}
           onClick={() => {
             if (Mq.sm) handleToggle();
-            else window.open(spotify_143_playlist_link, "_blank");
           }}
         >
-          <Text sx={lxStyle()}>Lx</Text>
-
-          {/* {!Mq.sm ? (
+          {!Mq.sm ? (
             <a href="#landing">
               <Text sx={lxStyle()}>Lx</Text>
             </a>
           ) : (
             <Text sx={lxStyle()}>Lx</Text>
-          )} */}
+          )}
         </Box>
 
         <Box style={rowCenterSpaceevely()}>
@@ -71,6 +67,7 @@ function Header() {
                   return (
                     <a key={index} href={headerHref[index]}>
                       <Text
+                        key={index}
                         sx={{
                           paddingRight: "2vw",
                           "&:hover": {
@@ -83,6 +80,8 @@ function Header() {
                       </Text>
                     </a>
                   );
+                } else {
+                  return <></>;
                 }
               })}
             </Box>
@@ -125,7 +124,6 @@ function Header() {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "15px",
-
             backgroundColor: " rgba(0, 0, 0, 0)",
           }}
         >
@@ -143,6 +141,7 @@ function Header() {
         return (
           <a key={index} href={headerHref[index]}>
             <Card
+              key={index}
               onClick={() => setcurrentIndex(index)}
               style={{
                 width: "200px",
@@ -223,7 +222,7 @@ function Header() {
   function lxStyle() {
     return {
       fontFamily: "Poppins",
-      fontSize: "1.2rem",
+      fontSize: "15px",
       fontWeight: "700",
       letterSpacing: "0.1rem",
       "&:hover": {

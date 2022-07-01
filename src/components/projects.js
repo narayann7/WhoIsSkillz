@@ -116,6 +116,7 @@ function Projects() {
       if (index === currentIndex) {
         return (
           <Card
+            key={index}
             onClick={() => changeIndex(index)}
             style={{
               width: "200px",

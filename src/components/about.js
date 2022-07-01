@@ -7,11 +7,8 @@ function About() {
   const { Mq } = useRootContext();
 
   return (
-    <BackgroundCard  id="about">
-      <CenterCard 
-      className="reveal"
-      
-      style={CenterCardStyle()}>
+    <BackgroundCard id="about">
+      <CenterCard className="reveal" style={CenterCardStyle()}>
         <div style={aboutContentStyle()}>
           <Text style={aboutMeStyle()}>About me.</Text>
         </div>

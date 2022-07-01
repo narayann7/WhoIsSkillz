@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Card, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const BackgroundCard = styled(Box)(({ theme }) => ({
   height: "100vh",
@@ -13,10 +13,6 @@ const BackgroundCard = styled(Box)(({ theme }) => ({
 }));
 
 const CenterCardLanding = styled(Box)(({ theme }) => ({
-  // [theme.breakpoints.up("sm")]: {
-  //   color: "red",
-  // },
-
   height: "100%",
   width: "64%",
   display: "flex",
@@ -25,14 +21,11 @@ const CenterCardLanding = styled(Box)(({ theme }) => ({
   flexDirection: "column",
 }));
 const CenterCard = styled(Box)(({ theme }) => ({
-  // backgroundColor: theme.palette.background.paper,
   height: "100%",
   width: "64%",
   display: "flex",
   justifyContent: "center",
-  // alignItems: "self-start",
   alignItems: "center",
-
   flexDirection: "column",
 }));
 

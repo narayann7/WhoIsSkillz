@@ -17,7 +17,7 @@ import {
 import { Box } from "@mui/material";
 import { useRootContext } from "../context_api/root_context";
 
-const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
+const { BackgroundCard, CenterCard, Text } = common_styles;
 function Connect() {
   const { isDark, Mq } = useRootContext();
   return (
@@ -171,7 +171,7 @@ function Connect() {
         <Text
           id="connect"
           style={{
-            paddingTop: Mq.sm ? "25vh" : "30vh",
+            paddingTop: Mq.sm ? "25vh" : "35vh",
             paddingBottom: "8px",
           }}
         >

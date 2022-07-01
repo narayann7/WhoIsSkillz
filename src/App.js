@@ -1,5 +1,5 @@
-import { React, useEffect } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { React } from "react";
+import { Route, Routes } from "react-router-dom";
 import Error from "./components/error_component.js";
 import Landing from "./components/landing";
 import About from "./components/about";
@@ -14,14 +14,11 @@ import Connect from "./components/connect.js";
 
 function App() {
   const { isDark } = useRootContext();
-
-  useEffect(() => {}, []);
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
-        <Route path="/" element={<Navigate to="/who-is-skillz" />} />
         <Route
-          path="/who-is-skillz"
+          path="/"
           element={
             <>
               <Header />
@@ -30,8 +27,7 @@ function App() {
               <Skills />
               <Experience />
               <Projects />
-              {/* <Footer /> */}
-              <Connect/>
+              <Connect />
             </>
           }
         />
