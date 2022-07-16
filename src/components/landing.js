@@ -68,7 +68,7 @@ function Landing() {
             color: isDark ? "#6EB69D" : "#035a69",
           }}
         >
-          Narayan
+          Narayann
         </Text>
         <div className="imWrapper">
           <div

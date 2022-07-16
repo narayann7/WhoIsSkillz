@@ -143,12 +143,12 @@ function Experience() {
             }}
             sx={{
               "&:hover": {
-                color: isDark ? "#6EB69D" : "#035a69",
+                color: !isDark ? "#000000" : "#ffffff",
               },
             }}
             style={{
               fontSize: Mq.sm ? "18px" : "20px",
-
+              color: isDark ? "#6EB69D" : "#035a69",
               cursor: "pointer",
             }}
           >
@@ -176,14 +176,10 @@ function Experience() {
               onClick={() => {
                 window.open(work_experience.extra.appLink, "_blank");
               }}
-              sx={{
-                "&:hover": {
-                  color: isDark ? "#6EB69D" : "#035a69",
-                },
-              }}
               style={{
                 marginLeft: "1px",
                 cursor: "pointer",
+                color: isDark ? "#6EB69D" : "#035a69",
               }}
             >
               {"PlayStoreLink "}

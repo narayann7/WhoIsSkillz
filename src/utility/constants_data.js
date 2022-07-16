@@ -102,10 +102,10 @@ export const work_experience_two = {
 export const work_experience_one = {
   company_name: "Velozity",
   company_link: "https://velozityglobal.com/",
-  date: "25 Feb(2022) - current",
+  date: "25 Feb(2022) - July(2022)",
   job_title: "Flutter Developer",
   points: [
-    "Actively contributing to Customer, Restaurant, and Delivery apps which are  part of a Food delivery service, In which I am responsible for developing UI, Business Logic with proper state-management using BLOC and MVC architecture",
+    "Contributed to Customer, Restaurant, and Delivery apps which are  part of a Food delivery service, In which I was responsible for developing UI, Business Logic with proper state-management using BLOC and MVC architecture",
     "Designed the Authentication and Authorization flow for Restaurant and Delivery the app login, register, and OTP by using RiverPod as state-management and restful APIs    ",
     "Integrated 20+ Restful APIs, creating orders, Oder tracking using Google Maps API, Payment integration using Razor Pay, Signing APK and other business logic for all three apps.",
   ],

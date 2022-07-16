@@ -15,7 +15,7 @@ function About() {
         <div>
           <Text2
             style={{
-              fontSize: Mq.sm ? "1rem" : Mq.md ? "1.1rem" : "1.3rem",
+              fontSize: Mq.sm ? "1rem" : Mq.md ? "1.1rem" : "1.4rem",
             }}
           >
             {about_me}

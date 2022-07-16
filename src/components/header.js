@@ -242,6 +242,9 @@ function Header() {
       height: "37px",
       width: "37px",
       borderRadius: "12px",
+      "&:hover": {
+        border: !isDark ? "2px solid black" : "2px solid#9ebfb4",
+      },
     };
   }
 
@@ -256,6 +259,9 @@ function Header() {
       width: "40px",
       marginRight: "10px",
       borderRadius: "12px",
+      "&:hover": {
+        border: !isDark ? "2px solid black" : "2px solid#9ebfb4",
+      },
     };
   }
 
@@ -267,7 +273,7 @@ function Header() {
       display: "flex",
       justifyContent: "space-between",
       paddingLeft: "8vw",
-      paddingRight: "8vw",
+      paddingRight: "13.4vw",
       alignItems: "center",
       color: "white",
       opacity: "0.9",
