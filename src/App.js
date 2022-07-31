@@ -5,6 +5,7 @@ import Landing from "./components/landing";
 import About from "./components/about";
 import { ThemeProvider } from "@emotion/react";
 import themes from "./utility/themes";
+import {useRootContext} from "./context_api/root_context";
 import Header from "./components/header.js";
 import Experience from "./components/experience.js";
 import Projects from "./components/projects";
@@ -16,8 +17,8 @@ function App() {
   const { isDark } = useRootContext();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1200)
-  }, [])
+    setTimeout(() => setLoading(false), 1200);
+  }, []);
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>
       <Routes>
@@ -38,7 +39,6 @@ function App() {
           />
         ) : (
           <Route
-          
             path="/"
             element={
               <>
@@ -55,4 +55,3 @@ function App() {
 }
 
 export default App;
-
