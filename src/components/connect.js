@@ -2,18 +2,18 @@ import React from "react";
 import common_styles from "../components/common_styles";
 import images from "../assets/base_assets";
 import { AllSocial } from "./header";
-import { RiTelegramFill } from "react-icons/ri";
-import { TbBrandWhatsapp } from "react-icons/tb";
-import { RiSpotifyFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
-import { RiInstagramLine } from "react-icons/ri";
-import {
-  leetcode_link,
-  telegram_link,
-  whatsapp_link,
-  instagram_link,
-  spotify_link,
-} from "../utility/links";
+// import { RiTelegramFill } from "react-icons/ri";
+// import { TbBrandWhatsapp } from "react-icons/tb";
+// import { RiSpotifyFill } from "react-icons/ri";
+// import { SiLeetcode } from "react-icons/si";
+// import { RiInstagramLine } from "react-icons/ri";
+// import {
+//   leetcode_link,
+//   telegram_link,
+//   whatsapp_link,
+//   instagram_link,
+//   spotify_link,
+// } from "../utility/links";
 import { Box } from "@mui/material";
 import { useRootContext } from "../context_api/root_context";
 
