@@ -40,6 +40,8 @@ function Header() {
   const handleToggle = () => {
     setOpen(!open);
   };
+  console.log(window.pageYOffset)
+
   return (
     <>
       {backDrop()}
@@ -314,7 +316,7 @@ export const AllSocial = ({ isDark }) => {
   return (
     <>
       <span
-        className="social_icons"
+        className="social_icons social_icons_github"
         id="github"
         style={{
           color: isDark ? "white" : "black",
@@ -333,7 +335,7 @@ export const AllSocial = ({ isDark }) => {
       </span>
 
       <span
-        className="social_icons"
+        className="social_icons social_icons_linkedin"
         id="linkedin_link"
         style={{
           paddingTop: "10px",
@@ -353,7 +355,7 @@ export const AllSocial = ({ isDark }) => {
       </span>
 
       <span
-        className="social_icons"
+        className="social_icons social_icons_gmail"
         id="gmail_link"
         style={{
           paddingTop: "10px",
@@ -373,7 +375,7 @@ export const AllSocial = ({ isDark }) => {
       </span>
 
       <span
-        className="social_icons"
+        className="social_icons social_icons_stackoverflow"
         id="stackoverflow_link"
         style={{
           paddingTop: "10px",
@@ -393,7 +395,7 @@ export const AllSocial = ({ isDark }) => {
       </span>
 
       <span
-        className="social_icons"
+        className="social_icons social_icons_twitter"
         id="twitter_link"
         style={{
           paddingTop: "10px",

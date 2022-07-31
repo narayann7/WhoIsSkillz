@@ -35,7 +35,7 @@ function Connect() {
         <Text
           style={{
             fontFamily: "Be Vietnam Pro",
-            fontSize: Mq.sm ? "55px" : Mq.md ? "60px" : "90px",
+            fontSize: Mq.sm ? "45px" : Mq.md ? "55px" : "70px",
             margin: "0px",
             letterSpacing: "-1px",
             fontWeight: "900",
@@ -55,7 +55,7 @@ function Connect() {
           <Text
             style={{
               fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "30px" : Mq.md ? "35px" : "50px",
+              fontSize: Mq.sm ? "23px" : Mq.md ? "30px" : "35px",
             }}
           >
             with
@@ -63,8 +63,8 @@ function Connect() {
           <Box>
             <img
               style={{
-                height: Mq.sm ? "50px" : "90px",
-                width: Mq.sm ? "100px" : "180px",
+                height: Mq.sm ? "40px" : Mq.md ? "55px" : "90px",
+                width: Mq.sm ? "80px" : Mq.md ? "110px" : "180px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -76,7 +76,7 @@ function Connect() {
           <Text
             style={{
               fontFamily: "Be Vietnam Pro",
-              fontSize: Mq.sm ? "30px" : Mq.md ? "35px" : "50px",
+              fontSize: Mq.sm ? "23px" : Mq.md ? "30px" : "35px",
             }}
           >
             me
@@ -164,21 +164,21 @@ function Connect() {
                 height: "4vh",
               }}
             >
-              <AllSocial2 isDark={isDark} />
+              {/* <AllSocial2 isDark={isDark} /> */}
             </div>
           </div>
         )}
         <Text
           id="connect"
           style={{
-            paddingTop: Mq.sm ? "25vh" : "35vh",
+            paddingTop: Mq.sm ? "25vh" : Mq.md ? "20vh" : "35vh",
             paddingBottom: "8px",
           }}
         >
           Built with ♥️ by Narayan
         </Text>
       </CenterCard>
-      {!Mq.md && <SideSocial isDark={isDark} />}
+      {/* {!Mq.md && <SideSocial isDark={isDark} />} */}
     </BackgroundCard>
   );
 }
@@ -198,7 +198,7 @@ function SideSocial({ isDark }) {
         width: "10vh",
       }}
     >
-      <AllSocial2 isDark={isDark} />
+      {/* <AllSocial2 isDark={isDark} /> */}
       <div
         style={{
           backgroundColor: isDark ? "white" : "black",
@@ -210,107 +210,107 @@ function SideSocial({ isDark }) {
   );
 }
 
-export const AllSocial2 = ({ isDark }) => {
-  return (
-    <>
-      <span
-        className="social_icons"
-        id="instagram_link"
-        style={{
-          color: isDark ? "white" : "black",
-        }}
-      >
-        <a
-          href={instagram_link}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: isDark ? "white" : "black",
-          }}
-        >
-          <RiInstagramLine size={22} />
-        </a>
-      </span>
+// export const AllSocial2 = ({ isDark }) => {
+//   return (
+//     <>
+//       <span
+//         className="social_icons"
+//         id="instagram_link"
+//         style={{
+//           color: isDark ? "white" : "black",
+//         }}
+//       >
+//         <a
+//           href={instagram_link}
+//           target="_blank"
+//           rel="noreferrer"
+//           style={{
+//             color: isDark ? "white" : "black",
+//           }}
+//         >
+//           <RiInstagramLine size={22} />
+//         </a>
+//       </span>
 
-      <span
-        className="social_icons"
-        id="linkedin_link"
-        style={{
-          paddingTop: "10px",
-          color: isDark ? "white" : "black",
-        }}
-      >
-        <a
-          href={spotify_link}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: isDark ? "white" : "black",
-          }}
-        >
-          <RiSpotifyFill size={22} />
-        </a>
-      </span>
+//       <span
+//         className="social_icons"
+//         id="linkedin_link"
+//         style={{
+//           paddingTop: "10px",
+//           color: isDark ? "white" : "black",
+//         }}
+//       >
+//         <a
+//           href={spotify_link}
+//           target="_blank"
+//           rel="noreferrer"
+//           style={{
+//             color: isDark ? "white" : "black",
+//           }}
+//         >
+//           <RiSpotifyFill size={22} />
+//         </a>
+//       </span>
 
-      <span
-        className="social_icons"
-        id="gmail_link"
-        style={{
-          paddingTop: "10px",
-          color: isDark ? "white" : "black",
-        }}
-      >
-        <a
-          href={leetcode_link}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: isDark ? "white" : "black",
-          }}
-        >
-          <SiLeetcode size={22} />
-        </a>
-      </span>
+//       <span
+//         className="social_icons"
+//         id="gmail_link"
+//         style={{
+//           paddingTop: "10px",
+//           color: isDark ? "white" : "black",
+//         }}
+//       >
+//         <a
+//           href={leetcode_link}
+//           target="_blank"
+//           rel="noreferrer"
+//           style={{
+//             color: isDark ? "white" : "black",
+//           }}
+//         >
+//           <SiLeetcode size={22} />
+//         </a>
+//       </span>
 
-      <span
-        className="social_icons"
-        id="stackoverflow_link"
-        style={{
-          paddingTop: "10px",
-          color: isDark ? "white" : "black",
-        }}
-      >
-        <a
-          href={telegram_link}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: isDark ? "white" : "black",
-          }}
-        >
-          <RiTelegramFill size={22} />
-        </a>
-      </span>
+//       <span
+//         className="social_icons"
+//         id="stackoverflow_link"
+//         style={{
+//           paddingTop: "10px",
+//           color: isDark ? "white" : "black",
+//         }}
+//       >
+//         <a
+//           href={telegram_link}
+//           target="_blank"
+//           rel="noreferrer"
+//           style={{
+//             color: isDark ? "white" : "black",
+//           }}
+//         >
+//           <RiTelegramFill size={22} />
+//         </a>
+//       </span>
 
-      <span
-        className="social_icons"
-        id="twitter_link"
-        style={{
-          paddingTop: "10px",
-          color: isDark ? "white" : "black",
-        }}
-      >
-        <a
-          href={whatsapp_link}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: isDark ? "white" : "black",
-          }}
-        >
-          <TbBrandWhatsapp size={22} />
-        </a>
-      </span>
-    </>
-  );
-};
+//       <span
+//         className="social_icons"
+//         id="twitter_link"
+//         style={{
+//           paddingTop: "10px",
+//           color: isDark ? "white" : "black",
+//         }}
+//       >
+//         <a
+//           href={whatsapp_link}
+//           target="_blank"
+//           rel="noreferrer"
+//           style={{
+//             color: isDark ? "white" : "black",
+//           }}
+//         >
+//           <TbBrandWhatsapp size={22} />
+//         </a>
+//       </span>
+//     </>
+//   );
+// };

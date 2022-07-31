@@ -101,10 +101,28 @@ body {
   }
 }
 
-.social_icons :hover {
-  color: #46826d;
+.social_icons_github :hover {
+  color: #c3c3c3;
   transform: translateY(-1.5px);
 }
+
+.social_icons_linkedin :hover {
+  color: #007ab5;
+  transform: translateY(-1.5px);
+}
+.social_icons_gmail :hover {
+  color: #e75a4d;
+  transform: translateY(-1.5px);
+}
+.social_icons_stackoverflow :hover {
+  color: #ed7c24;
+  transform: translateY(-1.5px);
+}
+.social_icons_twitter :hover {
+  color: #00aced;
+  transform: translateY(-1.5px);
+}
+
 .social_icons {
   transition: transform 200ms;
 }
@@ -129,26 +147,50 @@ body {
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
-
-.container {
-  width: 100%;
-}
-.eye {
-  position: relative;
-  display: inline-block;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  background: #fff;
-}
-.eye:after {
-  /*pupil*/
+.circle {
   position: absolute;
-  bottom: 17px;
-  right: 10px;
-  width: 18px;
-  height: 18px;
-  background: #000;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 50%;
-  content: " ";
+}
+
+.circle:nth-of-type(1) {
+  width: 190px;
+  height: 175px;
+  animation: rt 0.4s infinite linear;
+  box-shadow: 0 0 1px 0 #6eb69d, inset 0 0 10px 0 #6eb69d;
+}
+.circle:nth-of-type(2) {
+  width: 195px;
+  height: 180px;
+  animation: rt 0.8s infinite linear;
+  box-shadow: 0 0 1px 0 #6ee8bd, inset 0 0 10px 0 #6ee8bd;
+}
+
+.circle:nth-of-type(3) {
+  width: 210px;
+  height: 185px;
+  animation: rt 1.5s infinite linear;
+  box-shadow: 0 0 1px 0 #6fbfc3, inset 0 0 10px 0 #6fbfc3;
+}
+.circle:nth-of-type(4) {
+  width: 210px;
+  height: 190px;
+  animation: rt 2s infinite linear;
+  box-shadow: 0 0 1px 0 #60c4cf, inset 0 0 10px 0 #60c4cf;
+}
+.circle:nth-of-type(5) {
+  width: 215px;
+  height: 195px;
+  animation: rt 2.3s infinite linear;
+  box-shadow: 0 0 1px 0 #70d7b3, inset 0 0 10px 0 #70d7b3;
+}
+
+@keyframes rt {
+  100% {
+    transform: rotate(360deg);
+  }
 }

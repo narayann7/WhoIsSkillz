@@ -10,11 +10,11 @@ import { spotify_143_playlist_link } from "../utility/links";
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
 const iam = [
-  "App Developer .",
-  "Backend enthusiastic .",
+  "Developer .",
+  "Technophile  .",
   "Problem Solver .",
-  "Backend enthusiastic .",
-  "App Developer .",
+  "Technophile  .",
+  "Developer .",
 ];
 function Landing() {
   const { isDark, Mq } = useRootContext();
@@ -85,9 +85,9 @@ function Landing() {
             }}
           >
             {iam.map((item, index) => {
-              if (item === "Backend enthusiastic ." && Mq.sm) {
-                item = "Backend en.";
-              }
+              // if (item === "Backend enthusiastic ." && Mq.sm) {
+              //   item = "Backend en.";
+              // }
               return (
                 <span key={index}>
                   <Text
@@ -169,7 +169,7 @@ function ResumeButton(Mq, isDark) {
         justifyContent: "center",
         alignItems: "center",
         textTransform: "none",
-        borderRadius: Mq.sm ? "0.4rem" : "0.8rem",
+        borderRadius: Mq.sm ? "0.4rem" : "10px",
         border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
         marginTop: Mq.sm ? "10px" : "30px",
         backgroundColor: isDark ? "#6EB69D" : "#035a69",

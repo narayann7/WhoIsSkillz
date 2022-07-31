@@ -1,5 +1,5 @@
 const resume_link =
-  "https://drive.google.com/file/d/1RWDnqbWynTUZ_qqe8ujR7SWSlVjgjful/view";
+  "https://drive.google.com/file/d/1ez9ayxLCMtu3ogFoLV0BOAFT6raCz-6c/view?usp=sharing";
 const linkedin_link = "https://www.linkedin.com/in/narayann/";
 const github_link = "https://github.com/narayann7";
 const gmail_link = "mailto:laxminarayanreddy432@gmail.com";
