@@ -5,7 +5,6 @@ import Landing from "./components/landing";
 import About from "./components/about";
 import { ThemeProvider } from "@emotion/react";
 import themes from "./utility/themes";
-import RootProvider, { useRootContext } from "./context_api/root_context";
 import Header from "./components/header.js";
 import Experience from "./components/experience.js";
 import Projects from "./components/projects";

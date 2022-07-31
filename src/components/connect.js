@@ -184,31 +184,31 @@ function Connect() {
 }
 
 export default Connect;
-function SideSocial({ isDark }) {
-  return (
-    <div
-      style={{
-        paddingLeft: "100px",
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        flexDirection: "column",
-        backgroundColor: "transparent",
-        height: "40vh",
-        width: "10vh",
-      }}
-    >
-      {/* <AllSocial2 isDark={isDark} /> */}
-      <div
-        style={{
-          backgroundColor: isDark ? "white" : "black",
-          height: "20vh",
-          width: "1.5px",
-        }}
-      ></div>
-    </div>
-  );
-}
+// function SideSocial({ isDark }) {
+//   return (
+//     <div
+//       style={{
+//         paddingLeft: "100px",
+//         display: "flex",
+//         justifyContent: "space-evenly",
+//         alignItems: "center",
+//         flexDirection: "column",
+//         backgroundColor: "transparent",
+//         height: "40vh",
+//         width: "10vh",
+//       }}
+//     >
+//       {/* <AllSocial2 isDark={isDark} /> */}
+//       <div
+//         style={{
+//           backgroundColor: isDark ? "white" : "black",
+//           height: "20vh",
+//           width: "1.5px",
+//         }}
+//       ></div>
+//     </div>
+//   );
+// }
 
 // export const AllSocial2 = ({ isDark }) => {
 //   return (
