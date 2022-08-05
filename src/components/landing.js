@@ -10,11 +10,11 @@ import { spotify_143_playlist_link } from "../utility/links";
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
 const iam = [
-  "Developer .",
-  "Technophile  .",
+  "Technophile .",
+  "Developer  .",
   "Problem Solver .",
-  "Technophile  .",
-  "Developer .",
+  "Developer  .",
+  "Technophile .",
 ];
 function Landing() {
   const { isDark, Mq } = useRootContext();
@@ -68,7 +68,7 @@ function Landing() {
             color: isDark ? "#6EB69D" : "#035a69",
           }}
         >
-          Narayann
+          Narayan
         </Text>
         <div className="imWrapper">
           <div
@@ -161,10 +161,10 @@ function ResumeButton(Mq, isDark) {
         window.open(resume_link, "_blank");
       }}
       style={{
-        paddingLeft: Mq.sm ? "5px" : "20px",
-        paddingRight: Mq.sm ? "5px" : "20px",
-        paddingTop: Mq.sm ? "2px" : "8px",
-        paddingBottom: Mq.sm ? "2px" : "8px",
+        paddingLeft: Mq.sm ? "5px" : "15px",
+        paddingRight: Mq.sm ? "5px" : "15px",
+        paddingTop: Mq.sm ? "2px" : "5px",
+        paddingBottom: Mq.sm ? "2px" : "5px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

@@ -77,7 +77,7 @@ function Projects() {
               alignItems: "center",
             }}
           >
-            <Text style={proStyle()}>Projects</Text>
+            <Text style={proStyle()}>Projects.</Text>
             {Mq.md && (
               <div
                 onClick={() => {

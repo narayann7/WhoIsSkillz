@@ -17,7 +17,7 @@ function App() {
   const { isDark } = useRootContext();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1200);
+    setTimeout(() => setLoading(false), 1500);
   }, []);
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>

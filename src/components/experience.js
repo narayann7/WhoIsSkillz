@@ -41,7 +41,7 @@ function Experience() {
               alignItems: "center",
             }}
           >
-            <Text style={expStyle()}>Experience</Text>
+            <Text style={expStyle()}>Experience.</Text>
             {Mq.md && (
               <div
                 onClick={() => {

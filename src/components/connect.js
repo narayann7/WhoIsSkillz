@@ -23,13 +23,13 @@ function Connect() {
   return (
     <BackgroundCard
       style={{
-        alignItems: "flex-end",
+        alignItems: "center",
       }}
     >
       <CenterCard
         style={{
           paddingTop: "50px",
-          justifyContent: "flex-end",
+          justifyContent: Mq.sm ? "flex-end" : "center",
         }}
       >
         <Text
@@ -147,31 +147,19 @@ function Connect() {
                 justifyContent: "space-between",
                 alignItems: "end",
                 flexdirection: "row",
-                marginTop: "15px",
+                // marginTop: "15px",
                 width: Mq.sm ? "40vw" : "20vw",
-                height: "4vh",
+                height: "vh",
               }}
             >
               <AllSocial isDark={isDark} />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "end",
-                flexdirection: "row",
-                width: Mq.sm ? "40vw" : "20vw",
-                height: "4vh",
-              }}
-            >
-              {/* <AllSocial2 isDark={isDark} /> */}
             </div>
           </div>
         )}
         <Text
           id="connect"
           style={{
-            paddingTop: Mq.sm ? "25vh" : Mq.md ? "20vh" : "35vh",
+            paddingTop: Mq.sm ? "25vh" : Mq.md ? "20vh" : "30px",
             paddingBottom: "8px",
           }}
         >
