@@ -12,12 +12,20 @@ import Projects from "./components/projects";
 import Skills from "./components/skills.js";
 import Connect from "./components/connect.js";
 import Loading from "./components/loading.js";
-
 function App() {
   const { isDark } = useRootContext();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
+    setTimeout(() => setLoading(false), 1000);
+    // const handleScroll = event => {
+    //   console.log('window.scrollY', window.scrollY);
+    // };
+
+    // window.addEventListener('scroll', handleScroll);
+
+    // return () => {
+    //   window.removeEventListener('scroll', handleScroll);
+    // };
   }, []);
   return (
     <ThemeProvider theme={isDark ? themes.DarkTheme : themes.LightTheme}>

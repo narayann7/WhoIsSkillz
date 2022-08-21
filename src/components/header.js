@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -22,15 +22,9 @@ import images from "./../assets/base_assets";
 const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
-  const { switchTheme, isDark, Mq } = useRootContext();
-  const headerArr = ["landing", "about", "experience", "projects", "connect"];
-  const headerHref = [
-    "#landing",
-    "#about",
-    "#experience",
-    "#projects",
-    "#connect",
-  ];
+  const { switchTheme, isDark, Mq, } = useRootContext();
+  const headerArr = ["landing", "about", "experience", "projects"];
+  const headerHref = ["#landing", "#about", "#experience", "#projects"];
   const [currentIndex, setcurrentIndex] = useState(0);
 
   const [open, setOpen] = React.useState(false);
@@ -40,7 +34,7 @@ function Header() {
   const handleToggle = () => {
     setOpen(!open);
   };
-  console.log(window.pageYOffset)
+
 
   return (
     <>
@@ -67,20 +61,34 @@ function Header() {
               {headerArr.map((header, index) => {
                 if (index !== 0) {
                   return (
-                    <a key={index} href={headerHref[index]}>
-                      <Text
-                        key={index}
-                        sx={{
-                          paddingRight: "2vw",
-                          "&:hover": {
-                            color: isDark ? "#6EB69D" : "#035a69",
-                            cursor: "pointer",
-                          },
-                        }}
-                      >
-                        {header}
-                      </Text>
-                    </a>
+                    <Box
+                      sx={{
+                        "&:hover": {
+                          backgroundColor: isDark ? "#0f1e24" : "#a3c1b7",
+                          // border: !isDark ? "1.8px solid black" : "1.8px solid#9ebfb4",
+
+                          borderRadius: "8px",
+                        },
+                      }}
+                      style={{
+                        // backgroundColor: "grey",
+                        padding: "0.65vh 0.8vw",
+                        marginRight: "1vw",
+                      }}
+                    >
+                      <a key={index} href={headerHref[index]}>
+                        <Text
+                          key={index}
+                          sx={{
+                            "&:hover": {
+                              cursor: "pointer",
+                            },
+                          }}
+                        >
+                          {header}
+                        </Text>
+                      </a>
+                    </Box>
                   );
                 } else {
                   return <></>;
@@ -218,6 +226,7 @@ function Header() {
       justifyContent: "space-evenly",
       alignItems: "center",
       flexDirection: "row",
+      marginRight: "0.5vw",
     };
   }
 

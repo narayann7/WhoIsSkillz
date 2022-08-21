@@ -7,12 +7,13 @@ import { useRootContext } from "../context_api/root_context";
 import {
   work_experience_one,
   work_experience_two,
+  work_experience_three,
 } from "../utility/constants_data";
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Experience() {
   const { isDark, Mq } = useRootContext();
-  const companyArr = ["Velozity", "Embrays tech."];
-  const workArr = [work_experience_one, work_experience_two];
+  const companyArr = ["Caravel Tech","Velozity", "Embrays Tech.",];
+  const workArr = [work_experience_three,work_experience_one,work_experience_two,, ,];
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -205,7 +206,7 @@ function Experience() {
         }}
       >
         <IoIosArrowForward
-          size={Mq.sm ? "1.5rem" : "35px"}
+          size={Mq.sm ? "1.5rem" : "2rem"}
           style={{
             color: isDark ? "#6EB69D" : "#035a69",
             marginRight: "6px",

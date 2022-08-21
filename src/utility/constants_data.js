@@ -79,8 +79,7 @@ export const tech_stack = {
   recommendation,
 };
 
-export const about_me =
-  "Hello, hope you're doing well. I am 20 years old and a fourth-year undergraduate Computer Science student from India 🇮🇳 pursuing BTech. at National Institute of Science and Technology, Berhampur. An adaptable individual who is passionate⚡about developing apps and learning new💡technologies, also an Enthusiastic problem solver, who uses code as a tool for problem-solving 👀. Having experience in Flutter and React, currently exploring the Backend / Server-side. So you'll rarely find me AFK 🧑‍💻. When I'm not coding, I try to improve my Design and UI skills and also love 💜 to consume news and articles, top picks XDA, itsFoss. ";
+export const about_me ="Hey there, I hope you're doing well. I am 20 years old and a fourth-year undergraduate Computer Science student from India 🇮🇳 pursuing BTech. At the National Institute of Science and Technology, Berhampur.  An adaptable individual who is passionate ⚡ about developing apps and learning new 💡 technologies as well as an enthusiastic problem-solver who use code to do so 👀.  Having experience in Flutter and React, currently exploring the Backend / Server-side. As a result, you'll rarely find me AFK 🧑‍💻. Apart from coding, I enjoy improving my design and user interface skills, and also love 💜 to consume news and articles."
 
 export const work_experience_two = {
   company_name: "Embrays Technologies",
@@ -108,6 +107,14 @@ export const work_experience_one = {
     "Contributed to Customer, Restaurant, and Delivery apps which are  part of a Food delivery service, In which I was responsible for developing UI, Business Logic with proper state-management using BLOC and MVC architecture",
     "Designed the Authentication and Authorization flow for Restaurant and Delivery the app login, register, and OTP by using RiverPod as state-management and restful APIs    ",
     "Integrated 20+ Restful APIs, creating orders, Oder tracking using Google Maps API, Payment integration using Razor Pay, Signing APK and other business logic for all three apps.",
+  ],
+};
+export const work_experience_three = {
+  company_name: "Caravel.Tech",
+  company_link: "https://caravel.ai/",
+  date: "Aug(2022) - current",
+  job_title: "SDE Intern",
+  points: [
   ],
 };
 
