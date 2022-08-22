@@ -13,7 +13,7 @@ const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Experience() {
   const { isDark, Mq } = useRootContext();
   const companyArr = ["Caravel Tech","Velozity", "Embrays Tech.",];
-  const workArr = [work_experience_three,work_experience_one,work_experience_two,, ,];
+  const workArr = [work_experience_three,work_experience_one,work_experience_two];
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
