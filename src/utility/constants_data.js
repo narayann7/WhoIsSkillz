@@ -113,7 +113,7 @@ export const work_experience_three = {
   company_name: "Caravel.Tech",
   company_link: "https://caravel.ai/",
   date: "Aug(2022) - current",
-  job_title: "SDE Intern",
+  job_title: "Software Developer",
   points: [
   ],
 };

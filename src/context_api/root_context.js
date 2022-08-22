@@ -1,13 +1,13 @@
 import { useMediaQuery } from "@mui/material";
 import { React, useContext, createContext, useState, useEffect } from "react";
 import AppTheme from "../utility/local_storage";
-import useWindowDimensions from "./../utility/common_functions";
 const RootContext = createContext();
 export const useRootContext = () => useContext(RootContext);
 const RootProvider = (props) => {
   const [isDark, setisDark] = useState(true);
-  const [getScrollHeight, setScrollHeight] = useState(null);
-  const { app_height, app_width } = useWindowDimensions();
+  const [getScrollHeight, setScrollHeight] = useState(0);
+  const [showResume, setShowResume] = useState(false);
+
   const Mq = {
     esm: useMediaQuery("(min-width:400px)"),
     sm: useMediaQuery("(max-width:600px)"),
@@ -27,9 +27,10 @@ const RootProvider = (props) => {
     isDark,
     setisDark,
     switchTheme,
-    app_height,getScrollHeight,
+    getScrollHeight,
+    showResume,
+    setShowResume,
     setScrollHeight,
-    app_width,
     Mq,
   };
   return (

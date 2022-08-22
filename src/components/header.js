@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, } from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -59,6 +59,7 @@ function Header() {
           {!Mq.sm && (
             <Box style={rowCenterSpaceevely()}>
               {headerArr.map((header, index) => {
+                
                 if (index !== 0) {
                   return (
                     <Box
