@@ -12,8 +12,12 @@ import {
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Experience() {
   const { isDark, Mq } = useRootContext();
-  const companyArr = ["Caravel Tech","Velozity", "Embrays Tech.",];
-  const workArr = [work_experience_three,work_experience_one,work_experience_two];
+  const companyArr = ["Caravel Tech", "Velozity", "Embrays Tech."];
+  const workArr = [
+    work_experience_three,
+    work_experience_one,
+    work_experience_two,
+  ];
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -272,6 +276,7 @@ function Experience() {
   }
   function CenterCardStyle() {
     return {
+      paddingLeft: Mq.sm ? "0px" : Mq.md ? "0px" : "55px",
       width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
       display: "flex",
       marginLeft: Mq.sm ? "0px" : "50px",

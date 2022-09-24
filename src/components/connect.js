@@ -163,7 +163,7 @@ function Connect() {
             paddingBottom: "8px",
           }}
         >
-          Built with ♥️ by Narayan
+          Built with 💜 by Narayan
         </Text>
       </CenterCard>
       {/* {!Mq.md && <SideSocial isDark={isDark} />} */}

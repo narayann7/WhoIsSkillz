@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useState } from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -22,7 +22,7 @@ import images from "./../assets/base_assets";
 const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
-  const { switchTheme, isDark, Mq, } = useRootContext();
+  const { switchTheme, isDark, Mq } = useRootContext();
   const headerArr = ["landing", "about", "experience", "projects"];
   const headerHref = ["#landing", "#about", "#experience", "#projects"];
   const [currentIndex, setcurrentIndex] = useState(0);
@@ -34,7 +34,6 @@ function Header() {
   const handleToggle = () => {
     setOpen(!open);
   };
-
 
   return (
     <>
@@ -59,7 +58,6 @@ function Header() {
           {!Mq.sm && (
             <Box style={rowCenterSpaceevely()}>
               {headerArr.map((header, index) => {
-                
                 if (index !== 0) {
                   return (
                     <Box
@@ -99,9 +97,17 @@ function Header() {
           )}
           <Box sx={darkModeSwitchStyle()} onClick={switchTheme}>
             {isDark ? (
-              <HiOutlineSun size={20} />
+              <HiOutlineSun
+                onMouseOver={({ target }) => (target.style.color = "#6eb69d")}
+                onMouseOut={({ target }) => (target.style.color = "white")}
+                size={20}
+              />
             ) : (
-              <HiOutlineMoon size={20} color="black" />
+              <HiOutlineMoon
+                size={20}
+                onMouseOver={({ target }) => (target.style.color = "#035a69")}
+                onMouseOut={({ target }) => (target.style.color = "black")}
+              />
             )}
           </Box>
           <div></div>
@@ -284,7 +290,7 @@ function Header() {
       position: "fixed",
       display: "flex",
       justifyContent: "space-between",
-      paddingLeft: "8vw",
+      paddingLeft: "12vw",
       paddingRight: "13.4vw",
       alignItems: "center",
       color: "white",
@@ -298,7 +304,7 @@ export const SideSocial = ({ isDark }) => {
   return (
     <div
       style={{
-        left: "7.1vw",
+        left: "11.5vw",
         bottom: "-2vh",
         position: "fixed",
         display: "flex",

@@ -50,6 +50,7 @@ function Skills() {
 
   function CenterCardStyle() {
     return {
+      paddingLeft: Mq.sm ? "0px" : Mq.md ? "0px" : "20px",
       marginTop: Mq.sm ? "0px" : "50px",
       width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
       display: "flex",

@@ -79,10 +79,11 @@ export const tech_stack = {
   recommendation,
 };
 
-export const about_me ="Hey there, I hope you're doing well. I am 20 years old and a fourth-year undergraduate Computer Science student from India 🇮🇳 pursuing BTech. At the National Institute of Science and Technology, Berhampur.  An adaptable individual who is passionate ⚡ about developing apps and learning new 💡 technologies as well as an enthusiastic problem-solver who use code to do so 👀.  Having experience in Flutter and React, currently exploring the Backend / Server-side. As a result, you'll rarely find me AFK 🧑‍💻. Apart from coding, I enjoy improving my design and user interface skills, and also love 💜 to consume news and articles."
+export const about_me =
+  "Hey there, I hope you're doing well. I am 21 years old and a final-year undergraduate Computer Science student from India  🇮🇳  pursuing BTech at the National Institute of Science and Technology. An adaptable individual who is passionate ⚡ about developing apps and learning new 💡 technologies as well as an enthusiastic problem-solver who use code to do so 👀.  Having experience in Flutter and React, currently exploring the Backend / Server-side. As a result, you'll rarely find me AFK 🧑‍💻. Apart from coding, I enjoy improving my design and user interface skills, and also love 💜 to consume news and articles.";
 
 export const work_experience_two = {
-  company_name: "Embrays Technologies",
+  company_name: "Embrays",
   company_link: "https://embraystechnologies.com/",
   date: "9 Dec(2021) - 12 Jan(2022)",
   job_title: "Flutter Developer",
@@ -110,12 +111,11 @@ export const work_experience_one = {
   ],
 };
 export const work_experience_three = {
-  company_name: "Caravel.Tech",
-  company_link: "https://caravel.ai/",
+  company_name: "Caravel",
+  company_link: "https://caravel.tech/",
   date: "Aug(2022) - current",
   job_title: "Software Developer",
-  points: [
-  ],
+  points: [],
 };
 
 export const projects_names = ["Ping-It", "QuickTweets", "PixelLab"];

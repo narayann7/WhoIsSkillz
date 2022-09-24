@@ -48,6 +48,7 @@ function About() {
   function CenterCardStyle() {
     return {
       width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
+      paddingLeft: Mq.sm ? "0px" : Mq.md ? "0px" : "20px",
       display: "flex",
       marginLeft: Mq.sm ? "0px" : "50px",
       marginBottom: Mq.sm ? "100px" : "0px",

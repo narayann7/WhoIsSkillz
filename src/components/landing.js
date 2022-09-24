@@ -10,11 +10,11 @@ import { spotify_143_playlist_link } from "../utility/links";
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
 const iam = [
-  "Technophile .",
-  "Developer  .",
-  "Problem Solver .",
-  "Developer  .",
-  "Technophile .",
+  "Technophile.",
+  "Developer.",
+  "Problem Solver.",
+  "Developer.",
+  "Technophile.",
 ];
 function Landing() {
   const { isDark, Mq } = useRootContext();
@@ -52,7 +52,7 @@ function Landing() {
                   paddingLeft: "2px",
                 }
               : {
-                  fontSize: "2rem",
+                  fontSize: "1.5rem",
                 }
           }
         >

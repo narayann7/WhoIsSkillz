@@ -176,6 +176,7 @@ function Projects() {
 
   function CenterCardStyle() {
     return {
+      paddingLeft: Mq.sm ? "0px" : Mq.md ? "0px" : "55px",
       width: Mq.sm ? "75vw" : Mq.md ? "65vw" : "50vw",
       height: Mq.sm ? "65vh" : "50vh",
       display: "flex",
