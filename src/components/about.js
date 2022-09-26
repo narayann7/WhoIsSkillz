@@ -16,6 +16,8 @@ function About() {
           <Text2
             style={{
               fontSize: Mq.sm ? "1rem" : Mq.md ? "1.1rem" : "1.4rem",
+              textAlign: "justify",
+              textAlignLast: "start",
             }}
           >
             {about_me}
