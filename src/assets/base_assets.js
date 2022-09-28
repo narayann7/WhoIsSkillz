@@ -2,6 +2,7 @@ import lp_logo from "./images/lp_logo.png";
 import github_icon from "./icons/GitHub.png";
 import c_icon from "./icons/c++.png";
 import autohotkey_icon from "./icons/autohotkey.png";
+import power_toy from "./icons/power.png";
 import mongo_icon from "./icons/mongo.png";
 import devtoy_icon from "./icons/devtoy.png";
 import firebase_icon from "./icons/firebase.png";
@@ -31,6 +32,7 @@ const images = {
   github_icon,
   c_icon,
   autohotkey_icon,
+  power_toy,
   mongo_icon,
   devtoy_icon,
   firebase_icon,

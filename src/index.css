@@ -9,8 +9,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: var(--font-pop);
   font-family: var(--font-sen);
+  font-family: var(--font-pop);
   scrollbar-width: thin;
   scrollbar-color: #6eb69d #0c111a;
 }

@@ -2,10 +2,13 @@ import { Button, Card } from "@mui/material";
 import common_styles from "./common_styles";
 import images from "./../assets/base_assets";
 import { useRootContext } from "../context_api/root_context";
+import { useNavigate } from "react-router-dom";
 const { Text } = common_styles;
 
 function Error() {
   const { Mq, isDark } = useRootContext();
+  const navigate = useNavigate();
+  var data = " (>_<)";
   return (
     <Card
       style={{
@@ -19,7 +22,7 @@ function Error() {
         height: "100vh",
       }}
     >
-      <div>
+      {/* <div>
         <img
           style={{
             height: Mq.sm ? "200px" : "300px",
@@ -27,24 +30,32 @@ function Error() {
           src={images.error_404}
           alt="error_404"
         />
-      </div>
+      </div> */}
       <Text
         style={{
-          fontSize: Mq.sm ? "18px" : "30px",
+          fontSize: Mq.sm ? "60px" : "170px",
+          color: "#cde0fc",
+          letterSpacing: "10px",
+          fontFamily: "Poppins",
+        }}
+      >
+        {data}
+      </Text>
+      <Text
+        style={{
+          fontSize: Mq.sm ? "14px" : "20px",
+          marginTop: "20px",
           color: "#cde0fc",
         }}
       >
-        this page is taking nap 😴
+        Unfortunately, this page doesn't exist.
       </Text>
       <Button
         onClick={() => {
-          window.open("/", "_self");
+          navigate("/");
         }}
         style={{
-          paddingLeft: Mq.sm ? "5px" : "20px",
-          paddingRight: Mq.sm ? "5px" : "20px",
-          paddingTop: Mq.sm ? "2px" : "8px",
-          paddingBottom: Mq.sm ? "2px" : "8px",
+          padding: "5px 15px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -58,12 +69,14 @@ function Error() {
       >
         <Text
           style={{
+            fontSize: Mq.sm ? "14px" : "18px",
+
             fontWeight: "700",
-            letterSpacing: "0.05rem",
+            letterSpacing: "0.03rem",
             color: isDark ? "black" : "white",
           }}
         >
-          lets go back
+          lets go back 🚀
         </Text>
       </Button>
     </Card>

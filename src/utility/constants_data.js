@@ -71,6 +71,10 @@ const recommendation = [
     name: "AutoHotkey",
     icon: images.autohotkey_icon,
   },
+  {
+    name: "PowerToys",
+    icon: images.power_toy,
+  },
 ];
 
 export const tech_stack = {
