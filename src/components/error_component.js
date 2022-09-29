@@ -1,6 +1,5 @@
 import { Button, Card } from "@mui/material";
 import common_styles from "./common_styles";
-import images from "./../assets/base_assets";
 import { useRootContext } from "../context_api/root_context";
 import { useNavigate } from "react-router-dom";
 const { Text } = common_styles;
