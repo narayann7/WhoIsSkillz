@@ -19,6 +19,8 @@
   /* fonts */
   --font-sen: "Sen", sans-serif;
   --font-pop: "Poppins", sans-serif;
+  cursor: url("./assets/icons/myCursor.png");
+
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-ms: 90%;

@@ -10,6 +10,7 @@ import node_icon from "./icons/node.png";
 import express_icon from "./icons/exp.png";
 import js_icon from "./icons/js.png";
 import dart_icon from "./icons/dart.png";
+import my_cursor from "./icons/myCursor.png";
 import notion_icon from "./icons/notion.png";
 import mui_icon from "./icons/mui.png";
 import git_icon from "./icons/git.png";
@@ -26,6 +27,7 @@ const images = {
   error_404,
   handshake,
   pro1,
+  my_cursor,
   pro2,
   pro3,
   lp_logo,
