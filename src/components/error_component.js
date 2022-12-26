@@ -1,13 +1,11 @@
 import { Button, Card } from "@mui/material";
 import common_styles from "./common_styles";
+import images from "./../assets/base_assets";
 import { useRootContext } from "../context_api/root_context";
-import { useNavigate } from "react-router-dom";
 const { Text } = common_styles;
 
 function Error() {
   const { Mq, isDark } = useRootContext();
-  const navigate = useNavigate();
-  var data = " (>_<)";
   return (
     <Card
       style={{
@@ -21,61 +19,59 @@ function Error() {
         height: "100vh",
       }}
     >
-      {/* <div>
+      <div>
         <img
           style={{
-            height: Mq.sm ? "200px" : "300px",
+            height: Mq.sm ? "150px" : "200px",
           }}
           src={images.error_404}
           alt="error_404"
         />
-      </div> */}
+      </div>
       <Text
         style={{
-          fontSize: Mq.sm ? "60px" : "170px",
+          fontSize: Mq.sm ? "18px" : "20px",
           color: "#cde0fc",
-          letterSpacing: "10px",
-          fontFamily: "Poppins",
         }}
       >
-        {data}
+        {" whoops.."}
       </Text>
       <Text
         style={{
-          fontSize: Mq.sm ? "14px" : "20px",
-          marginTop: "20px",
+          fontSize: Mq.sm ? "18px" : "20px",
           color: "#cde0fc",
         }}
       >
-        Unfortunately, this page doesn't exist.
+        {"this page is not available"}
       </Text>
       <Button
         onClick={() => {
-          navigate("/");
+          window.open("/", "_self");
         }}
         style={{
-          padding: "5px 15px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+          // paddingTop: Mq.sm ? "2px" : "8px",
+          // paddingBottom: Mq.sm ? "2px" : "8px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           textTransform: "none",
-          borderRadius: Mq.sm ? "0.4rem" : "0.8rem",
+          borderRadius: "0.5rem",
           border: isDark ? "2px solid #035a69" : "2px solid #6EB69D",
           marginTop: "20px",
-          backgroundColor: "#8ea6f4",
+          backgroundColor: "#e1ecff",
           color: isDark ? "black" : "white",
         }}
       >
         <Text
           style={{
-            fontSize: Mq.sm ? "14px" : "18px",
-
             fontWeight: "700",
-            letterSpacing: "0.03rem",
+            letterSpacing: "0.05rem",
             color: isDark ? "black" : "white",
           }}
         >
-          lets go back 🚀
+          lets go back
         </Text>
       </Button>
     </Card>
