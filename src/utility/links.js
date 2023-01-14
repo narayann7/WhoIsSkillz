@@ -1,12 +1,12 @@
 const resume_link =
-  "https://drive.google.com/file/d/1CywxzONOdmyKp2dx8cnW_w-mUfIUdy49/view";
+  "https://drive.google.com/file/d/1tP4OGRZTkrW5lm9_1V71ctkMWfPKxl0Y/view";
 const linkedin_link = "https://www.linkedin.com/in/narayann/";
 const github_link = "https://github.com/narayann7";
 const gmail_link = "mailto:laxminarayanreddy432@gmail.com";
 const whatsapp_link = "https://wa.me/+918249903317";
 const telegram_link = "https://t.me/skillz6";
 const leetcode_link = "https://leetcode.com/narayann7/";
-const twitter_link = "https://twitter.com/narayann_";
+const twitter_link = "https://twitter.com/_narayann";
 const instagram_link = "https://www.instagram.com/_narayann/";
 const stackoverflow_link = "https://stackoverflow.com/users/14385914/narayann";
 const spotify_end_playlist_link =

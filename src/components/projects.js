@@ -12,6 +12,7 @@ import { useRootContext } from "../context_api/root_context";
 
 import {
   projects_names,
+  projects_zero,
   projects_one,
   projects_two,
   projects_three,
@@ -20,7 +21,12 @@ import common_styles from "../components/common_styles";
 
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Projects() {
-  const projects_list = [projects_one, projects_two, projects_three];
+  const projects_list = [
+    projects_zero,
+    projects_one,
+    projects_two,
+    projects_three,
+  ];
 
   const { isDark, Mq } = useRootContext();
   const [open, setOpen] = React.useState(false);
@@ -53,7 +59,6 @@ function Projects() {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "15px",
-
             backgroundColor: " rgba(0, 0, 0, 0)",
           }}
         >
@@ -205,13 +210,14 @@ function ProjectDetails({ project, Mq }) {
           flexDirection: "column",
         }}
       >
-        <CardMedia
-          component="img"
-          alt="image"
-          height="160"
-          image={project.picture}
-        />
-
+        {project.picture && (
+          <CardMedia
+            component="img"
+            alt="image"
+            height="160"
+            image={project.picture}
+          />
+        )}
         <Box
           style={{
             display: "flex",

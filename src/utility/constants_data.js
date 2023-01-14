@@ -122,8 +122,21 @@ export const work_experience_three = {
   points: [],
 };
 
-export const projects_names = ["Ping-It", "QuickTweets", "PixelLab"];
+export const projects_names = [
+  " Extension Enabler",
+  "Ping-It",
+  "QuickTweets",
+  "PixelLab",
+];
 
+export const projects_zero = {
+  // picture: images.pro1,
+  name: " Extension Enabler",
+  link: "https://github.com/narayann7/ExtensionEnabler",
+  preview: "https://pub.dev/packages/extension_enabler",
+  description:
+    "A Flutter Package (CLI App) that enables flutter web app as chromium based extension with simple command, Package automates setting up the configs with file manipulation and command arguments like (enable, update, and build).",
+};
 export const projects_one = {
   picture: images.pro1,
   name: "Ping-It",
