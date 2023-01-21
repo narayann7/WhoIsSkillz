@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useRootContext } from "../context_api/root_context";
 import common_styles from "../components/common_styles";
 import { GrLinkedinOption } from "react-icons/gr";
+import { BsSpotify } from "react-icons/bs";
 import { RiStackOverflowLine } from "react-icons/ri";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { VscTwitter } from "react-icons/vsc";
+import { useNavigate } from "react-router-dom";
 import {
   linkedin_link,
   github_link,
@@ -22,6 +24,7 @@ import images from "./../assets/base_assets";
 const { BackgroundCard, Text, Text2 } = common_styles;
 
 function Header() {
+  var navigate = useNavigate();
   const { switchTheme, isDark, Mq } = useRootContext();
   const headerArr = ["landing", "about", "experience", "projects"];
   const headerHref = ["#landing", "#about", "#experience", "#projects"];
@@ -95,17 +98,37 @@ function Header() {
               })}
             </Box>
           )}
-          <Box sx={darkModeSwitchStyle()} onClick={switchTheme}>
+          {!Mq.sm && (
+            <Box
+              sx={darkModeSwitchStyle()}
+              onClick={() => {
+                navigate("/playlists");
+              }}
+            >
+              <BsSpotify
+                color={isDark ? "white" : "black"}
+                onMouseOut={({ target }) => (target.style.color = "white")}
+                size={20}
+              />
+            </Box>
+          )}
+          <Box
+            sx={darkModeSwitchStyle()}
+            style={{
+              marginLeft: "1vw",
+            }}
+            onClick={switchTheme}
+          >
             {isDark ? (
               <HiOutlineSun
-                onMouseOver={({ target }) => (target.style.color = "#6eb69d")}
+                color={isDark ? "white" : "black"}
                 onMouseOut={({ target }) => (target.style.color = "white")}
                 size={20}
               />
             ) : (
               <HiOutlineMoon
                 size={20}
-                onMouseOver={({ target }) => (target.style.color = "#035a69")}
+                color={isDark ? "white" : "black"}
                 onMouseOut={({ target }) => (target.style.color = "black")}
               />
             )}
@@ -258,6 +281,7 @@ function Header() {
       flexDirection: "column",
       backgroundColor: isDark ? "#102027" : "#9ebfb4",
       height: "37px",
+      padding: "0.65vh 0.8vw",
       width: "37px",
       borderRadius: "12px",
       "&:hover": {

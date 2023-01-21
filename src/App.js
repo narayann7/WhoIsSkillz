@@ -12,6 +12,7 @@ import Projects from "./components/projects";
 import Skills from "./components/skills.js";
 import Connect from "./components/connect.js";
 import Loading from "./components/loading.js";
+import Playlist from "./components/playlist";
 function App() {
   const { isDark } = useRootContext();
   const [loading, setLoading] = useState(true);
@@ -46,7 +47,14 @@ function App() {
             }
           />
         )}
-
+        <Route
+          path="/playlists"
+          element={
+            <>
+              <Playlist />
+            </>
+          }
+        />
         <Route path="/*" element={<Error></Error>}></Route>
       </Routes>
     </ThemeProvider>

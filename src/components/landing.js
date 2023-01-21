@@ -3,10 +3,10 @@ import { Box, Button } from "@mui/material";
 import { resume_link } from "../utility/links";
 import { useRootContext } from "../context_api/root_context";
 import { HiExternalLink } from "react-icons/hi";
-import { TbPlaylist } from "react-icons/tb";
+import { BsSpotify } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import common_styles from "../components/common_styles";
 import { AllSocial } from "./header";
-import { spotify_143_playlist_link } from "../utility/links";
 const { BackgroundCard, Text, CenterCardLanding } = common_styles;
 
 const iam = [
@@ -25,6 +25,7 @@ function Landing() {
     "#projects",
     "#connect",
   ];
+  const navigate = useNavigate();
 
   const [currentIndex, setcurrentIndex] = useState(0);
 
@@ -121,18 +122,32 @@ function Landing() {
       </CenterCardLanding>
 
       {Mq.sm &&
-        floatingAction(headerHref, currentIndex, setcurrentIndex, isDark)}
+        floatingAction(
+          headerHref,
+          currentIndex,
+          setcurrentIndex,
+          isDark,
+          () => {
+            navigate("/playlists");
+          }
+        )}
     </BackgroundCard>
   );
 }
 
 export default Landing;
-function floatingAction(headerHref, currentIndex, setcurrentIndex, isDark) {
+function floatingAction(
+  headerHref,
+  currentIndex,
+  setcurrentIndex,
+  isDark,
+  onfun
+) {
   return (
     <a href={headerHref[currentIndex]}>
       <Box
         onClick={() => {
-          window.open(spotify_143_playlist_link, "_blank");
+          onfun();
         }}
         sx={{
           right: "35px",
@@ -148,7 +163,7 @@ function floatingAction(headerHref, currentIndex, setcurrentIndex, isDark) {
           borderRadius: "12px",
         }}
       >
-        <TbPlaylist size={20} color={isDark ? "white" : "black"} />
+        <BsSpotify size={20} color={isDark ? "white" : "black"} />
       </Box>
     </a>
   );
