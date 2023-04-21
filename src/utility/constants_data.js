@@ -117,8 +117,20 @@ export const work_experience_one = {
 export const work_experience_three = {
   company_name: "Caravel",
   company_link: "https://caravel.tech/",
-  date: "Aug(2022) - current",
+  date: "Aug(2022) - Feb(2023)",
   job_title: "Software Developer",
+  points: [
+    "Contributed to and maintained an ed tech app, I am responsible for architecture and Business Logic following best practices",
+    "Integrated 60+ Restful APIs with RiverPod (state management), Dio (networking), Hive (local storage) following MVC",
+    "Signing the APKs, made the app ready for release and launched to production",
+  ],
+};
+
+export const work_experience_four = {
+  company_name: "Nymble",
+  company_link: "https://www.eatwithnymble.com/",
+  date: "Feb(2023) - current",
+  job_title: "Flutter Developer",
   points: [],
 };
 

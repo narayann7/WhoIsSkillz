@@ -8,12 +8,14 @@ import {
   work_experience_one,
   work_experience_two,
   work_experience_three,
+  work_experience_four,
 } from "../utility/constants_data";
 const { BackgroundCard, CenterCard, Text, Text2 } = common_styles;
 function Experience() {
   const { isDark, Mq } = useRootContext();
-  const companyArr = ["Caravel Tech", "Velozity", "Embrays Tech."];
+  const companyArr = ["Nymble", "Caravel Tech", "Velozity", "Embrays Tech."];
   const workArr = [
+    work_experience_four,
     work_experience_three,
     work_experience_one,
     work_experience_two,
